@@ -1,0 +1,97 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'iconfont';
+  src: url("../font/font_zpy/iconfont.eot");
+  src: url("../font/font_zpy/iconfont.eot?#iefix") format("embedded-opentype"), url("../font/font-zpy/iconfont.woff") format("woff"), url("../font/font_zpy/iconfont.ttf") format("truetype"), url("../font/font_zpy/iconfont.svg#iconfont") format("svg");
+}
+
+.view .contnetUl {
+  margin-bottom: 0.32rem;
+}
+
+.view .contnetUl li {
+  padding: .1rem;
+}
+
+.view .contnetUl li .pic {
+  float: left;
+}
+
+.view .contnetUl li .pic img {
+  width: 1rem;
+  height: 1rem;
+}
+
+.view .contnetUl li .info {
+  padding-left: 1.22rem;
+}
+
+.view .contnetUl li .info .title {
+  color: #333333;
+  font-size: .15rem;
+}
+
+.view .contnetUl li .info .title span {
+  color: #ff6c00;
+}
+
+.view .contnetUl li .info .other {
+  padding-top: .3rem;
+  line-height: 20px;
+}
+
+.view .contnetUl li .info .other .mall {
+  float: left;
+  font-size: .12rem;
+}
+
+.view .contnetUl li .info .other .comment {
+  float: right;
+  font-size: .16rem;
+  color: #a1a1a1;
+}
+
+.view .contnetUl li .info .other .comment i {
+  float: left;
+  font-size: .12rem;
+}
+
+.view .contnetUl li .info .other .comment .iconfont {
+  display: block;
+  font-family: "iconfont";
+  color: #ccc;
+  font-size: .16rem;
+}
+
+/* 分页部分开始 */
+.page_list {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #0094FF;
+}
+
+.page_list span {
+  display: inline-block;
+  background-color: #ccc;
+  color: #fff;
+  padding: 0.04rem;
+  border-radius: 0.08rem;
+}
+
+.page_list select {
+  width: 0.55rem;
+  height: 0.32rem;
+  margin: 0 0.16rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.page_list select option {
+  width: 0.55rem;
+  height: 0.32rem;
+  border-bottom: 1px solid #ccc;
+}
+
+/* 分页部分结束 */
+/*# sourceMappingURL=toolActivity.css.map */
