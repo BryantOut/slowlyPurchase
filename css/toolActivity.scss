@@ -6,6 +6,7 @@
 
 .view {
     .contnetUl {
+        padding: 5px;
         margin-bottom: 0.32rem;
         li {
             padding: .1rem;
@@ -50,18 +51,22 @@
                 }
             }
         }
+        li:hover{
+            box-shadow: 0 0 .07rem 0 #ccc;
+        }
     }
 }
 
 /* 分页部分开始 */
 
 .page_list {
-    position: fixed;
-    bottom: 0;
+    // position: fixed;
+    // bottom: 0;
     width: 100%;
-    text-align: center;
-    background-color: #0094FF;
+    text-align: center; 
+    background-color: #fff;
     span {
+        cursor: pointer;
         display: inline-block;
         background-color: #ccc;
         color: #fff;
@@ -75,12 +80,15 @@
         height: 0.32rem;
         margin: 0 0.16rem;
         border-bottom: 1px solid #ccc;
+        font-size: 0.12rem;
         option {
             width: 0.55rem;
             height: 0.32rem;
             border-bottom: 1px solid #ccc;
+            font-size: 0.12rem;
         }
     }
 }
 
 /* 分页部分结束 */
+

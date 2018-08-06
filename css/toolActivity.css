@@ -6,6 +6,7 @@
 }
 
 .view .contnetUl {
+  padding: 5px;
   margin-bottom: 0.32rem;
 }
 
@@ -63,16 +64,20 @@
   font-size: .16rem;
 }
 
+.view .contnetUl li:hover {
+  -webkit-box-shadow: 0 0 .07rem 0 #ccc;
+          box-shadow: 0 0 .07rem 0 #ccc;
+}
+
 /* 分页部分开始 */
 .page_list {
-  position: fixed;
-  bottom: 0;
   width: 100%;
   text-align: center;
-  background-color: #0094FF;
+  background-color: #fff;
 }
 
 .page_list span {
+  cursor: pointer;
   display: inline-block;
   background-color: #ccc;
   color: #fff;
@@ -85,12 +90,14 @@
   height: 0.32rem;
   margin: 0 0.16rem;
   border-bottom: 1px solid #ccc;
+  font-size: 0.12rem;
 }
 
 .page_list select option {
   width: 0.55rem;
   height: 0.32rem;
   border-bottom: 1px solid #ccc;
+  font-size: 0.12rem;
 }
 
 /* 分页部分结束 */
