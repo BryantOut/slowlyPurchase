@@ -1,0 +1,33 @@
+body{
+    background-color: #f2f2f2;
+}
+<<<<<<< HEAD
+.entirety{
+    main{
+        
+=======
+$white:#fff;
+$black:#000;
+$master:#5a5a5a;
+
+.hide{
+    display: none;
+}
+
+.entirety{
+    .main{
+        background-color: #ebebeb;
+        width: 97%;
+        margin:1.5% auto 0;
+        height:500px;
+        border: 1px solid #ccc;
+        border-radius:7px;
+        ul{
+            list-style:none;
+            li{
+
+            }
+        }
+>>>>>>> ebd811720497a1c13f8f458c93638df4b21bc4a4
+    }
+}
