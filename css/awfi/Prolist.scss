@@ -1,0 +1,141 @@
+@import "awfi.scss";
+.entirety{
+    width: 100%;
+    .main{
+        width: 100%;
+        nav{
+            height: 40px;
+            width: 100%;
+            background-image:linear-gradient(to top,#eeeeee ,#fdfdfd);
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+            // align-items: center;
+            .navigation{
+                height: 40px;
+                line-height: 40px;
+                font-size:13px;
+                color:$black;
+                margin-left:10px;
+                a{
+                    color:$black;
+                }
+            }
+            .filtrate{
+                width: 10%;
+                height: 26px;
+                color:$black;
+                line-height: 26px;
+                text-align: center;
+                margin:6px 10px 0 0;
+                box-shadow: 1px 1px 2px #999,-2px 0px 2px #e2e2e5;
+                border-radius: 5px;
+                background-image:linear-gradient(to bottom,#e5e5e5 ,#faf8f8);
+            }
+        }
+        .product_list{
+            background-color: #fff;
+            width: 100%;
+            overflow: hidden;
+            a{
+                display: block;
+                li{
+                    width: 100%;
+                    padding:10px 2.5%;
+                    height:140px;
+                    display: flex;
+                    border-bottom: 1px solid #edecec;
+                    img{
+                        width: 120px;
+                        height:120px;
+                        // flex:2;
+                        margin-right:20px;
+                    }
+                    .content{
+                    flex:1;
+                    max-height:120px;
+                    //    background-color: red;
+                    h3{
+                        font-weight: 500;
+                        color:#2f2f2f;
+                        font-size:15px;
+                        line-height: 25px;
+                        height:50px;
+                        overflow: hidden;
+                    }
+                    .price{
+                        color:#ee0000;
+                        font-size:18px;
+                        margin-top:4px;
+                        //    em{
+                        //        font-size: 14px;
+                        //        float:left;
+                        //        margin-top:4px;
+                        //    }
+                    }
+                    .offer_comment{
+                        color:#adadad;
+                        font-size:12px;
+                        margin-top:10px;
+                        span{
+                            &:nth-child(1){
+                                margin-right:7px;
+                            }
+                        }
+                    }
+                    
+                    }
+                }
+            }
+        }
+        .pagelist{
+            width: 100%;
+            height: 35px;
+            display: flex;
+            justify-content:space-around;
+            margin:20px 0;
+            position: relative;
+            .switchover{
+            position: absolute;
+            right:15px;
+            top:-35px;
+            width: 25px;
+            height: 25px;
+            }
+            span{
+                width: 25%;
+                text-align:$textalign;
+                line-height: 35px;
+                border-radius:5px;
+                border:1px solid #c3c3c3;
+                background-image: linear-gradient(to top,#d8d8d8,#efefef);
+                box-shadow: 0px 1px 1px #ccc;
+            }
+            .page{
+                width: 20%;
+                font-size:14px;
+                line-height: 35px;
+                text-align:$textalign;
+                @include bgc($white); 
+                position: relative;
+                border: 1px solid #999;
+                .page_ul{
+                    position: absolute;
+                    left:0;
+                    // top:35px;
+                    bottom:34px;  
+                    width: 100%;
+                    background-color: $white; 
+                    z-index:9999;
+                    border: 1px solid #999;
+                    // border-top:none;
+                    border-bottom:none;
+                }
+            }
+            #selectPage{
+                width: 85px;
+                padding-left: 22px
+            }
+        }
+    }
+} 

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>比价选购 -- 慢慢买手机版</title>
+    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/awfi/awfi.css">
+    <link rel="stylesheet" href="./css/awfi/Proarticle.css">
+    <link rel="stylesheet" href="./js/layer_mobile/need/layer.css">
+    <script src="./js/layer_mobile/layer.js"></script>
+</head>
+
+<body>
+    <div class="entirety">
+
+        <div class="main">
+            <nav>
+                <div class="navigation clearfix">
+                    <a href="./index.html">首页</a> >
+                    <a href=""></a> >
+                    <a href="#"></a> >
+                </div>
+                <div class="filtrate">筛选</div>
+            </nav>
+            <div class="particulars">
+
+                <!-- <h1 class="particulars_title">苹果Apple iPhone7 Plus (A1661) 128G 玫瑰金色 全网通4G手机</h1>
+                <div class="particulars_img">
+                    <img src="http://pro.zuyushop.com:8015/ProPic/20166/Thumb/Thumb_2016060015515937123.png" alt="">
+                    <img src="./images/sc.png" alt="">
+                </div>
+                <ul class="tab_title">
+                    <li class="pitch">
+                        比价购买
+                        <img src="./images/tab_ar.png" alt="" style="display: block">
+                    </li>
+                    <li>
+                        产品参数
+                        <img src="./images/tab_ar.png" alt="">
+                    </li>
+                    <li>
+                        优选评价
+                        <img src="./images/tab_ar.png" alt="">
+                    </li>
+                </ul>
+                <ul class="tab_content">
+                    <li class="block">aa</li>
+                    <li></li>
+                    <li></li>
+                </ul> -->
+
+            </div>
+
+            <div class="comment">
+                 <div class="title">优选网友评价</div>
+                 <ul class="commentInfo">
+                     <!-- <li>
+                         <p class="user_time">
+                             <span>awf***pm</span>
+                             <span>2018/06/09</span>
+                         </p>
+                         <p class="merchant">购买自：京东商城</p>
+                         <p class="reviewTheContent">
+                                刚开始没注意有张必购码，后来发现很惊喜就下单了，京东物流还是很靠谱的，机子到手没有问题，不过屏幕确实比较暖，和6SP对比较黄，至于电流声目前还没有发现，运行速度很流畅，新的home键不褒不贬还可以吧，总体很满意，内存的提升真的比较爽~                
+                         </p>
+                     </li> -->
+                 </ul>
+            </div>
+            
+            <a href="#" class="more">
+                    查看更多评价
+            </div>
+
+        </div>
+
+    </div>
+</body>
+<script src="./js/template-web.js"></script>
+<script src="./js/zepto.js"></script>
+<!-- <script src="./js/jquery-1.12.2.js"></script> -->
+<script src="./js/Proarticle.js"></script>
+
+<script type="text/template" id="particularsTemp">
+    {{each result value}}
+    
+    <h1 class="particulars_title">{{value.productName}}</h1>
+    <div class="particulars_img">
+        {{@value.productImg}}
+        <a href="#"><img src="./images/sc.png" alt=""></a>
+    </div>
+    <ul class="tab_title">
+        <li class="pitch">
+            比价购买
+            <img src="./images/tab_ar.png" alt="" style="display: block">
+        </li>
+        <li>
+            产品参数
+            <img src="./images/tab_ar.png" alt="">
+        </li>
+        <li>
+            优选评价
+            <img src="./images/tab_ar.png" alt="">
+        </li>
+    </ul>
+    <ul class="tab_content">
+        <li class="block">
+            {{@value.bjShop}}
+        </li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    {{/each}}
+</script>
+
+<script type="text/template" id="commentInfoTemp">
+    {{each result value}}
+
+    <li>
+            <p class="user_time">
+                <span>{{value.comName}}</span>
+                <span>{{value.comTime}}</span>
+            </p>
+            <p class="merchant">{{value.comFrom}}</p>
+            <p class="reviewTheContent">
+                   {{value.comContent}}                
+            </p>
+        </li>
+
+    {{/each}}
+</script>
+
+</html>
