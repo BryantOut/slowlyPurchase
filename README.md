@@ -344,4 +344,20 @@ $.ajax({
 </script>
 ```
 
-## 
+## 四、图片懒加载的使用
+
+### 4.1  插件推荐
+
+[jq插件推荐](https://blog.csdn.net/qq947289507/article/details/81248721)
+
+### 4.2  截取字符串重点
+
+```js
+for (var i = 0; i < res.length; i++) {
+var startIndex=res[i].productImg.indexOf("\"");
+  var endIndex=res[i].productImg.indexOf("\"",startIndex+1);
+  var ssrrcc= res[i].productImg.slice(startIndex+1,endIndex);
+  console.log(ssrrcc)
+}
+```
+

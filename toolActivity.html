@@ -30,7 +30,7 @@
             <script type="text/x-art-template" id="tmpl">
                 {{each comments}}
                 <li>
-                    <a href="javascript:;">
+                    <a href="./Proarticle.html?id={{$value.productId}}">
                         <div class="pic">
                             {{@ $value["productImg2"]}}
                         </div>
@@ -94,7 +94,7 @@
                 },
                 url: "http://193.112.55.79:9090/api/getmoneyctrl",
                 success: function (res) {
-                    
+                    console.log(res.result);
                     //返回屏幕头部
                     document.documentElement.scrollTop = 0;
 
