@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    display: block;
+    text-decoration: none;//去掉默认的下划线
+    color: initial;//继承父元素
+}
+img{
+    width: 100%;
+    //去掉图片默认3px间距
+    display: block;
+}
+ul{
+    list-style: none;
+}
+input{
+    border: none;
+    outline: none;
+}
+.clearfix::after{
+    content: '';
+    height: 0;
+    
+    visibility: hidden;
+    clear: both;
+    display: block;
+}
