@@ -79,6 +79,7 @@
         var previous = document.getElementById("previous");
         var next = document.getElementById("next");
         var pagesize;
+        var pageCount;
         flag = false;
         setData(pageid);
 
@@ -93,7 +94,9 @@
                 },
                 url: "http://193.112.55.79:9090/api/getmoneyctrl",
                 success: function (res) {
-                    // console.log(res.result);
+                    
+                    //返回屏幕头部
+                    document.documentElement.scrollTop = 0;
 
                     var data = res.result;
                     //调用模板引擎渲染数据
@@ -105,28 +108,32 @@
                     //将渲染结果的html设置到默认元素的innerHTML中
                     $(".contnetUl").html(html);
 
-                    //获取总页数
-                    pagesize = res.pagesize;
+                    //计算总页数
+                    var totalCount = res.totalCount;
+                    var pagesize = res.pagesize;
+                    pageCount = parseInt(totalCount/pagesize)+"";
+                    
                     if (flag == false) {
                         // console.log ("123");
                         flag = true;
                         //动态生成option
-                        for (var i = 0; i < pagesize; i++) {
+                        for (var i = 0; i < pageCount; i++) {
                             var optionObj = document.createElement("option");
                             $("select").append(optionObj);
-                            $(optionObj).html("<i>" + (i + 1) + "</i>/<i>" + pagesize + "</i>");
-                            // $(optionObj).attr("index", i);
+                            $(optionObj).html("<i>" + (i + 1) + "</i>/<i>" + pageCount + "</i>");
                         }
                     }
+
+                    
                 }
             });
         }
 
         $("select").on("change", function () {
             // console.log($(this).attr("index"));
-            console.log(this.value);
+            // console.log(this.value);
             var str = this.value;
-            var index = str.replace("/10","");
+            var index = str.replace("/"+pageCount+"","");
             pageid = index;
             setData(index);
             // console.log($(this).attr("index"));
@@ -147,7 +154,7 @@
 
         next.onclick = function () {
             var options = document.getElementsByTagName("option");
-            if (pageid == pagesize) {
+            if (pageid == pageCount) {
                 $(next).attr('disable', true);
                 return;
             }
