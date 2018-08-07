@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买比价网</title>
+    <link rel="shortcut icon" href="./favicon.ico">
+    <!-- 引入初始化的CSS -->
+    <link rel="stylesheet" href="./css/base.css">
+    <!-- 引入当前页面的css -->
+    <link rel="stylesheet" href="./css/top10brand.css">
+</head>
+
+<body>
+    <div class="view">
+        <!-- 头部部分开始 -->
+        <div class="header"></div>
+        <!-- 头部部分结束 -->
+
+        <!-- 内容部分开始 -->
+        <div class="content">
+            <!-- 导航部分开始 -->
+            <div class="nav">
+                首页
+                <i class="iconfont">&#xe772;</i> 热门品牌排行
+            </div>
+            <!-- 导航部分结束 -->
+            <!-- 标题部分开始 -->
+            <h3>
+                热门品牌排行
+            </h3>
+            <!-- 标题部分结束 -->
+
+            <!-- 内容列表部分开始 -->
+            <div class="con_list">
+                <ul>
+                    <script type="text/x-art-template" id="tmpl">
+                        {{each comments}}
+                        <li>
+                            <a href="./get10Top.html?id={{$value.brandTitleId}}&name={{$value.brandTitle}}">
+                                <span>{{$value.brandTitle}}</span>
+                                <i class="iconfont">&#xe772;</i>
+                            </a>
+                        </li>
+                        {{/each}}
+                    </script>
+                </ul>
+            </div>
+            <!-- 内容列表部分结束 -->
+        </div>
+
+
+        <!-- 内容部分结束 -->
+
+
+
+        <!-- footer部分开始 -->
+        <div class="footer"></div>
+        <!-- footer部分结束 -->
+    </div>
+    <script src="./js/zh-zepto/zepto.min.js"></script>
+    <script src="./js/top10Brand.js"></script>
+    <script src="./js/plugin/art-template/template-web.js"></script>
+</body>
+
+</html>

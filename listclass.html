@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>产品分类 - 慢慢买</title>
+    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/awfi/awfi.css">
+    <link rel="stylesheet" href="./css/awfi/listclass.css">
+    <link rel="stylesheet" href="./js/layer_mobile/need/layer.css">
+    <script src="./js/layer_mobile/layer.js"></script>
+</head>
+<body>
+    <div class="entirety">
+
+        <div class="main">
+              <ul class="main_ul"></ul>
+        </div> 
+
+    </div>
+</body>
+<script src="./js/template-web.js"></script>
+<!-- <script src="./js/jquery-1.12.2.js"></script> -->
+<script src="./js/zepto.js"></script>
+<script src="./js/listclass.js"></script>
+
+
+<!-- 大分类渲染模版引擎 -->
+<script type="text/template" id="temp">
+   {{each result value index}}
+        <li class="main_ul_li">
+                <input type="hidden" value="{{value.titleId}}">
+                <div class="list_title">
+                    <h2 class="title">{{value.title}}</h2>
+                    <img src="./images/arrow1.gif" alt="" class="img1">
+                    <img src="./images/arrow2.gif" alt="" class="img2 hide">
+                </div>
+                <!-- <ul class="list_content clearfix hide">
+                 </ul> -->
+            </li>
+            <ul class="list_content clearfix hide">
+            </ul>
+    {{/each}}
+</script>
+
+<!-- 小分类渲染模版引擎 -->
+<script type="text/template" id="listTemp">
+    {{each result value index}}
+        <li><a href="Prolist.html?id={{value.categoryId}}">{{value.category}}</a></li>
+     {{/each}}
+ </script>
+
+</html>

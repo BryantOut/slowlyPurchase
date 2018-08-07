@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买比价网</title>
+    <link rel="shortcut icon" href="./favicon.ico">
+    <!-- 引入初始化的CSS -->
+    <link rel="stylesheet" href="./css/base.css">
+    <!-- 引入当前页面的css -->
+    <link rel="stylesheet" href="./css/get10Top.css">
+</head>
+
+<body>
+    <div class="view">
+        <!-- 头部部分开始 -->
+        <div class="header"></div>
+        <!-- 头部部分结束 -->
+
+        <!-- 内容部分开始 -->
+        <div class="content">
+            <!-- 导航部分开始 -->
+            <div class="nav">
+                首页
+                <i class="iconfont">&#xe772;</i> 品牌大全
+                <i class="iconfont">&#xe772;</i>
+                <p></p>
+            </div>
+            <!-- 导航部分结束 -->
+            <!-- 标题部分开始 -->
+            <h3></h3>
+            <!-- 标题部分结束 -->
+
+            <!-- 哪个牌子好部分开始 -->
+            <div class="whichBrandNice">
+                <ul class="whichBrandNiceUl">
+                    <script type="text/x-art-template" id="tmpl">
+                        {{each comments}}
+                        <li>
+                            <a href="javascript:;">
+                                <em>{{$index+1}}</em>
+                                <div class="secCon">
+                                    <h4>{{$value.brandName}}</h4>
+                                    <p>{{$value.brandInfo}}</p>
+                                </div>
+
+                                <i class="iconfont">&#xe775;</i>
+                            </a>
+                        </li>
+                        {{/each}}
+                    </script>
+                </ul>
+            </div>
+            <!-- 哪个牌子好部分结束 -->
+
+            <!-- 产品销量排行部分开始 -->
+            <div class="sellRanking">
+                <div class="title"></div>
+                <ul class="sellRankingUl">
+                    <script type="text/x-art-template" id="tmpl2">
+                        {{each comments}}
+                        <li>
+                            <a href="javascript:;">
+                                <div class="pic">
+                                    <!-- <img src="http://pro.zuyushop.com:8015/ProPic/20165/Thumb/Thumb_2016050013560999704.png" alt=""> -->
+                                    {{@ $value.productImg}}
+                                </div>
+                                <div class="info">
+                                    <div class="title">{{$value.productName}}</div>
+                                    <div class="price clearfix">
+                                        <em>{{$value.productPrice}}</em>
+                                        <div class="star">
+                                            <i class="iconfont">&#xe60c;</i>
+                                            <i class="iconfont">&#xe60c;</i>
+                                            <i class="iconfont">&#xe60c;</i>
+                                            <i class="iconfont">&#xe60c;</i>
+                                            <i class="iconfont">&#xe60c;</i>
+                                        </div>
+                                    </div>
+                                    <div class="other">
+                                        <em>{{$value.productQuote}}</em>
+                                        <em>{{$value.productCom}}</em>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        {{/each}}
+                    </script>
+                </ul>
+            </div>
+            <!-- 产品销量排行部分结束 -->
+
+            <!-- 最有用的用户评价部分开始 -->
+            <div class="goodHelpComment">
+                <div class="title"></div>
+                <!-- <h3></h3> -->
+                <div class="brandInfo">
+                    <div class="pic">
+                        
+                    </div>
+                    <p></p>
+                </div>
+                <ul class="goodHelpCommentUl">
+                    <!-- 准备一个模板引擎 -->
+                    <script type="text/x-art-template" id="tmpl3">
+                        {{each comments}}
+                        <li>
+                            <div class="comment">
+                                <a href="javascript:;">
+                                    <div class="commentTitle">
+                                        <span class="name">{{$value.comName}}</span>
+                                        <span class="star">
+                                            <i class="iconfont"></i>
+                                            <i class="iconfont"></i>
+                                            <i class="iconfont"></i>
+                                            <i class="iconfont"></i>
+                                            <i class="iconfont"></i>
+                                        </span>
+                                        <i>{{$value.comTime}}</i>
+                                    </div>
+                                    <div class="commentCon">
+                                        <p>{{$value.comContent}}</p>
+                                    </div>
+                                    <i class="comefrom">{{$value.comFrom}}</i>
+                                </a>
+                            </div>
+                        </li>
+                        {{/each}}
+                    </script>
+                </ul>
+            </div>
+            <!-- 最有用的用户评价部分结束 -->
+        </div>
+
+        <!-- footer部分开始 -->
+        <div class="footer"></div>
+        <!-- footer部分结束 -->
+
+    </div>
+    <script src="./js/zh-zepto/zepto.min.js"></script>
+    <script src="./js/plugin/art-template/template-web.js"></script>
+    <script>
+        $(document).ready(function () {
+            function GetRequest() {
+                var url = decodeURI(location.search); //获取url中"?"符后的字串   
+                var theRequest = new Object();
+                if (url.indexOf("?") != -1) {
+                    var str = url.substr(1);
+                    strs = str.split("&");
+                    for (var i = 0; i < strs.length; i++) {
+                        theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+                    }
+                }
+                return theRequest;
+            }
+
+            var Request = new Object();
+            Request = GetRequest();
+            // console.log(Request["id"]);
+
+            var btId = Request["id"];
+            console.log(typeof btId);
+            var btName = Request["name"];
+            // console.log(btName);
+
+            var brandTitle = btName;
+            var title = brandTitle.replace("十大品牌", "");
+            //console.log(title);//三门冰箱
+            $(".nav p").text(title + "哪个牌子好");
+            $(".content>h3").text(title + "哪个牌子好");
+            // $(".sellRanking>h3").text(title + "产品销量排行");
+            $(".goodHelpComment>h3").text(title + "最有用的用户评价");
+            $.ajax({
+                dataType: "json",
+                type: "get",
+                data: {
+                    brandtitleid: btId
+                },
+                url: "http://193.112.55.79:9090/api/getbrand",
+                success: function (res) {
+                    // console.log(res.result);
+                    var data = res.result;
+                    //调用模板引擎渲染数据
+                    var context = {
+                        comments: data
+                    }
+                    //借助模板引擎的api
+                    var html = template('tmpl', context);
+                    //将渲染结果的html设置到默认元素的innerHTML中
+                    $(".whichBrandNiceUl").html(html);
+                },
+                error: function () {
+                    console.log("请求数据失败");
+                }
+            });
+
+            //第一个商品的productid
+            var firstProductid;
+
+            $.ajax({
+                dataType: "json",
+                type: "get",
+                data: {
+                    brandtitleid: btId
+                },
+                url: "http://193.112.55.79:9090/api/getbrandproductlist",
+                success: function (res) {
+                    var data = res.result;
+                    // console.log(res.result);
+                    if (data.length != 0) {
+                        var h3Obj = document.createElement("h3");
+                        $(".sellRanking .title").append(h3Obj);
+                        // setInnerText(h3Obj,title + "产品销量排行");
+                        $(".sellRanking .title>h3").text(title + "产品销量排行");
+
+                        //为第一个商品的proId赋值
+                        firstProductid = data[0].productId;
+                        getHelpComment(firstProductid, title);
+
+                        //为评论的商品加图片和描述
+                        $(".brandInfo .pic").html(data[0].productImg);
+                        $(".brandInfo p").text(data[0].productName);
+                    }
+
+                    //调用模板引擎渲染数据
+                    var context = {
+                        comments: data
+                    }
+                    //借助模板引擎的api
+                    var html = template('tmpl2', context);
+                    //将渲染结果的html设置到默认元素的innerHTML中
+                    $(".sellRankingUl").html(html);
+                },
+                error: function () {
+                    console.log("请求数据失败");
+                }
+            });
+
+
+        });
+
+        function getHelpComment(firstProductid, title) {
+            $.ajax({
+                dataType: "json",
+                type: "get",
+                data: {
+                    productid: firstProductid
+                },
+                url: "http://193.112.55.79:9090/api/getproductcom",
+                success: function (res) {
+                    console.log(res.result);
+                    if (res.result.length != 0) {
+                        var h3Obj = document.createElement("h3");
+                        $(".goodHelpComment .title").append(h3Obj);
+                        // setInnerText(h3Obj,title + "产品销量排行");
+                        $(".goodHelpComment .title>h3").text(title + "最新的评价");
+                    } else {
+                        //评论返回数据长度为0，清除
+                        $(".brandInfo .pic").html("");
+                        $(".brandInfo p").text("");
+                    }
+                    var data = res.result;
+                    //调用模板引擎渲染数据
+                    var context = {
+                        comments: data
+                    }
+                    //借助模板引擎的api
+                    var html = template('tmpl3', context);
+                    // //将渲染结果的html设置到默认元素的innerHTML中
+                    $(".goodHelpCommentUl").html(html);
+                },
+                error: function () {
+                    console.log("请求数据失败");
+                }
+            });
+        }
+    </script>
+    <script src="./js/get10top.js"></script>
+</body>
+
+</html>

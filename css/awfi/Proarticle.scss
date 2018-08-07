@@ -1,0 +1,170 @@
+@import "awfi.scss";
+.entirety{
+    width: 100%;
+    .main{
+        width: 100%;
+        nav{
+            height: 40px;
+            width: 100%;
+            background-image:linear-gradient(to top,#eeeeee ,#fdfdfd);
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+            // align-items: center;
+            .navigation{
+                width: 100%;
+                height: 40px;
+                line-height: 40px;
+                font-size:13px;
+                color:$black;
+                margin-left:10px;
+ 
+                a{
+                    color:$black;
+                }
+            }
+            .filtrate{
+                width: 10%;
+                height: 26px;
+                color:$black;
+                line-height: 26px;
+                text-align: center;
+                margin:6px 10px 0 0;
+                box-shadow: 1px 1px 2px #999,-2px 0px 2px #e2e2e5;
+                border-radius: 5px;
+                background-image:linear-gradient(to bottom,#e5e5e5 ,#faf8f8);
+            }
+        }
+        .particulars{
+            width: 100%;
+            padding-top: 10px;
+            background-color: $white;
+            .particulars_img{
+                height: 170px;
+                text-align: center;
+                padding: 10px 2%;
+                position: relative;
+                a{
+                    position: absolute;
+                    right:20px;
+                    bottom:20px;
+                    img{
+                        width: 39px;
+                        height: 39px;  
+                    }
+                }
+            }
+            .particulars_title{
+                width:85%;
+                line-height: 23px;
+                font-size:16px;
+                font-weight: 500;
+                color:$black;
+                margin:8px auto 3px;
+                text-align: center;
+            }
+            .tab_title{
+                width: 100%;
+                display: flex;
+                li{
+                    flex:1;
+                    height: 34px;
+                    color: $white;
+                    text-align: center;
+                    line-height: 31px;
+                    font-size:15px;
+                    // background-color: #ffc31d;
+                    background-image:linear-gradient(to top,#ffbb01,#ffcf4d);
+                    border: 1px solid #c14d00;
+                    border-left:none;
+                    position: relative;
+                    &:last-child{
+                        border-right:none;
+                    }
+                    img{
+                    position: absolute;
+                    bottom:-5px;
+                    left:50%;
+                    width: 8px;
+                    height: 5px;
+                    transform: translateX(-120%);
+                    display: none; 
+                    }
+                }
+                .pitch{
+                    background-image:linear-gradient(to top,#ff9001,#ff9c1a,#ffa530);
+                }
+            }
+            .tab_content{
+                width: 98%;
+                padding:10px 1%;
+                background-color: $white;
+                li{
+                    display: none;
+                }
+                .block{
+                    display: block;
+                }
+            }
+        }
+        .comment{
+            margin-top:5px;
+            background-color: $white;
+            border-top: 2px solid #7a7a7a;
+            .title{
+                border-top: 1px solid $white;
+                @include bgc(#dbdbdb);
+                height: 34px;
+                font-size:14px;
+                line-height: 34px;
+                color: $black;
+                text-align: $textalign;
+            }
+            .commentInfo{
+                li{
+                    padding:13px 3% 0;
+                    width: 100%;
+                    border-bottom:1px solid #f2f2f2;
+                    .user_time{
+                        width: 100%;
+                        height: 18px;
+                        line-height: 18px;
+                        span{
+                            color:#6b687f;
+                            &:nth-child(1){
+                                float:left;
+                            }
+                            &:nth-child(2){
+                                float:right;
+                            }
+                        }
+                    }
+                    .merchant{
+                        width: 100%;
+                        text-align: right;
+                    }
+                    .reviewTheContent{
+                        width: 100%;
+                        color:$black;
+                        line-height: 20px;
+                        padding:8px 0;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        .more{
+            display: block;
+            width: 96%;
+            margin: 20px auto;
+            background-image:linear-gradient(to top,#d5d5d5,#f0f0f0);
+            border: 1px solid #c3c3c3;
+            border-radius: 5px;
+            height: 33px;
+            line-height: 33px;
+            text-align:center;
+            font-size:13px;
+            color:#5a5a5a;
+        }
+    }
+}

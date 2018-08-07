@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>最新优惠 - 省钱控 - 慢慢买</title>
+    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./font/font-zpy/iconfont.css">
+    <link rel="stylesheet" href="./css/toolActivity.css">
+</head>
+
+<body>
+    <!-- 头部部分开始 -->
+    <header>
+        <div class="back"><i class="iconfont">&#xf0343;</i></div>
+        <h3>省钱控-最新页面</h3>
+        <div class="download">
+            <a href="javascript:;">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!-- 头部部分结束 -->
+    <div class="view">
+        <ul class="contnetUl">
+            <!-- 准备一个模板引擎 -->
+            <script type="text/x-art-template" id="tmpl">
+                {{each comments}}
+                <li>
+                    <a href="javascript:;">
+                        <div class="pic">
+                            {{@ $value["productImg2"]}}
+                        </div>
+                        <div class="info clearfix">
+                            <div class="title">
+                                {{$value["productName"]}}
+                                <span>{{$value["productPinkage"]}}</span>
+                            </div>
+                            <div class="other">
+                                <div class="mall">{{$value["productFrom"]}} | {{$value["productTime"]}}</div>
+                                <div class="comment">
+                                    <i class="iconfont">&#xe650;</i>
+                                    <i>{{$value["productComCount"]}}</i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                {{/each}}
+            </script>
+        </ul>
+    </div>
+    <!-- 分页部分开始 -->
+    <div class="page_list">
+        <span class="previous" id="previous">上一页</span>
+        <select>
+        </select>
+        <span class="next" id="next">下一页</span>
+    </div>
+    <!-- 分页部分结束 -->
+    <script src="./js/toolActivity.js"></script>
+    <script src="./js/zh-zepto/zepto.min.js"></script>
+    <script src="./js/zpy/fastclick.js"></script>
+    <script src="./js/zpy/template-web.js"></script>
+    <script>
+        if ('addEventListener' in document) {
+            document.addEventListener('DOMContentLoaded', function () {
+                FastClick.attach(document.body);
+            }, false);
+        }
+
+        //获取元素
+        var selectObj = document.getElementsByTagName("select");
+        // console.dir(selectObj);
+        pageid = 1;
+        var previous = document.getElementById("previous");
+        var next = document.getElementById("next");
+        var pagesize;
+        var pageCount;
+        flag = false;
+        setData(pageid);
+
+
+        function setData(pageid) {
+            //渲染数据
+            $.ajax({
+                dataType: "json",
+                type: "get",
+                data: {
+                    pageid: pageid
+                },
+                url: "http://193.112.55.79:9090/api/getmoneyctrl",
+                success: function (res) {
+                    
+                    //返回屏幕头部
+                    document.documentElement.scrollTop = 0;
+
+                    var data = res.result;
+                    //调用模板引擎渲染数据
+                    var context = {
+                        comments: data
+                    }
+                    //借助模板引擎的api
+                    var html = template('tmpl', context);
+                    //将渲染结果的html设置到默认元素的innerHTML中
+                    $(".contnetUl").html(html);
+
+                    //计算总页数
+                    var totalCount = res.totalCount;
+                    var pagesize = res.pagesize;
+                    pageCount = parseInt(totalCount/pagesize)+"";
+                    
+                    if (flag == false) {
+                        // console.log ("123");
+                        flag = true;
+                        //动态生成option
+                        for (var i = 0; i < pageCount; i++) {
+                            var optionObj = document.createElement("option");
+                            $("select").append(optionObj);
+                            $(optionObj).html("<i>" + (i + 1) + "</i>/<i>" + pageCount + "</i>");
+                        }
+                    }
+
+                    
+                }
+            });
+        }
+
+        $("select").on("change", function () {
+            // console.log($(this).attr("index"));
+            // console.log(this.value);
+            var str = this.value;
+            var index = str.replace("/"+pageCount+"","");
+            pageid = index;
+            setData(index);
+            // console.log($(this).attr("index"));
+        });
+        
+        //为上下页标签注册点击事件
+        previous.onclick = function () {
+            var options = document.getElementsByTagName("option");
+            if (pageid == 1) {
+                $(next).attr('disable', true);
+                return;
+            }
+            pageid--;
+            setData(pageid);
+            console.log($(options[pageid]));
+            $(options[pageid - 1]).prop("selected", "selected");
+        }
+
+        next.onclick = function () {
+            var options = document.getElementsByTagName("option");
+            if (pageid == pageCount) {
+                $(next).attr('disable', true);
+                return;
+            }
+            pageid++;
+            setData(pageid);
+            $(options[pageid - 1]).prop("selected", "selected");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/font_zpy/iconfont.eot');
+    src: url('../font/font_zpy/iconfont.eot?#iefix') format('embedded-opentype'), url('../font/font-zpy/iconfont.woff') format('woff'), url('../font/font_zpy/iconfont.ttf') format('truetype'), url('../font/font_zpy/iconfont.svg#iconfont') format('svg');
+}
+
+/* 头部部分开始 */
+
+header {
+    display: flex;
+    background: #ff841d;
+    color: #FFFFFF;
+    height: 0.44rem;
+    line-height: 0.44rem;
+    padding: 0 0.08rem;
+    color: #fff;
+    .back {
+        float: left;
+        .iconfont {
+            font-family: "iconfont" !important;
+            font-size: .2rem;   
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-stroke-width: 0.2px;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    }
+    .download {
+        float: right;
+        width: .3rem;
+        img {
+            width: 100%;
+        }
+    }
+    h3 {
+        flex: 1;
+        float: left;
+        text-align: center;
+        font-size: 0.2rem;
+        font-weight: bold;
+    }
+}
+
+/* 头部部分结束 */
+
+.view {
+    .contnetUl {
+        padding: 5px;
+        margin-bottom: 0.32rem;
+        li {
+            padding: .1rem;
+            .pic {
+                float: left;
+                img {
+                    width: 1rem;
+                    height: 1rem;
+                }
+            }
+            .info {
+                padding-left: 1.22rem;
+                .title {
+                    color: #333333;
+                    font-size: .15rem;
+                    span {
+                        color: #ff6c00;
+                    }
+                }
+                .other {
+                    padding-top: .3rem;
+                    line-height: 20px;
+                    .mall {
+                        float: left;
+                        font-size: .12rem;
+                    }
+                    .comment {
+                        float: right;
+                        font-size: .16rem;
+                        color: #a1a1a1;
+                        i {
+                            float: left;
+                            font-size: .12rem;
+                        }
+                        .iconfont {
+                            display: block;
+                            font-family: "iconfont";
+                            color: #ccc;
+                            font-size: .16rem;
+                        }
+                    }
+                }
+            }
+        }
+        li:hover {
+            box-shadow: 0 0 .07rem 0 #ccc;
+        }
+    }
+}
+
+/* 分页部分开始 */
+
+.page_list {
+    // position: fixed;
+    // bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    span {
+        cursor: pointer;
+        display: inline-block;
+        background-color: #ccc;
+        color: #fff;
+        padding: 0.04rem;
+        border-radius: 0.08rem;
+    }
+    .previous {}
+    .next {}
+    select {
+        width: 0.55rem;
+        height: 0.32rem;
+        margin: 0 0.16rem;
+        border-bottom: 1px solid #ccc;
+        font-size: 0.12rem;
+        option {
+            width: 0.55rem;
+            height: 0.32rem;
+            border-bottom: 1px solid #ccc;
+            font-size: 0.12rem;
+        }
+    }
+}
+
+/* 分页部分结束 */

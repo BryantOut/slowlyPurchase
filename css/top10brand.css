@@ -1,0 +1,79 @@
+@charset "UTF-8";
+/* 初始化开始 */
+@font-face {
+  font-family: 'iconfont';
+  src: url("../font/font_dzh/iconfont.eot");
+  src: url("../font/font_dzh/iconfont.eot?#iefix") format("embedded-opentype"), url("../font/font_dzh/iconfont.woff") format("woff"), url("../font/font_dzh/iconfont.ttf") format("truetype"), url("../font/font_dzh/iconfont.svg#iconfont") format("svg");
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+/* 初始化结束 */
+/* 头部部分开始 */
+/* 头部部分结束 */
+/* footer部分开始 */
+/* footer部分结束 */
+/* 内容部分开始 */
+.content {
+  /* 导航部分开始 */
+  /* 导航部分结束 */
+  /* 标题部分开始 */
+  /* 标题部分结束 */
+  /* 内容列表部分开始 */
+  /* 内容列表部分结束 */
+}
+
+.content .nav {
+  height: 36px;
+  background-color: #ebebeb;
+  border-top: solid 1px #ebebeb;
+  border-bottom: 1px solid #ccc;
+  line-height: 36px;
+  padding-left: 8px;
+  font-size: 14px;
+}
+
+.content .nav .iconfont {
+  font-family: "iconfont";
+}
+
+.content h3 {
+  font-size: 16px;
+  color: #874604;
+  height: 40px;
+  padding-left: 10px;
+  line-height: 40px;
+  margin: 10px 5px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+}
+
+.content .con_list ul {
+  padding: 0 10px;
+}
+
+.content .con_list ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  color: #000;
+  font-size: 16px;
+  border-bottom: 1px solid #ccc;
+}
+
+.content .con_list ul li a span {
+  font-weight: bold;
+}
+
+.content .con_list ul li a .iconfont {
+  font-family: "iconfont";
+}
+
+/* 内容部分结束 */
+/*# sourceMappingURL=top10brand.css.map */
