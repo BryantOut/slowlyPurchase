@@ -1,0 +1,151 @@
+.box header {
+  height: 44px;
+  background-color: #ff841d;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.box header .icon-l {
+  text-align: center;
+  width: 50px;
+  height: 100%;
+  color: #ffffff;
+  font-size: 30px;
+}
+
+.box header h1 {
+  font-size: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  color: #fff;
+  line-height: 44px;
+  white-spacing: nowrap;
+  text-overflow: elispse;
+  overflow: hidden;
+}
+
+.box header .xz {
+  width: 50px;
+  height: 44px;
+}
+
+.box header .xz img {
+  width: 100%;
+  height: 100%;
+}
+
+.box .content li {
+  border-bottom: 1px solid #e0e0e0;
+  width: 100%;
+  padding: 14px 8px;
+}
+
+.box .content li a {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.box .content li a .pic img {
+  width: 100px;
+  height: 100px;
+}
+
+.box .content li a .info {
+  padding-left: 10px;
+  width: 100%;
+}
+
+.box .content li a .info .title {
+  width: 100%;
+  color: #333333;
+  word-break: break-all;
+  font-size: 15px;
+  line-height: 19px;
+  min-height: 57px;
+  text-align: left;
+  font-weight: normal;
+}
+
+.box .content li a .info .title span {
+  color: #ff6c00;
+  display: inline;
+}
+
+.box .content li a .info .shop {
+  margin-top: 20px;
+}
+
+.box .content .page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #f2f2f2;
+  padding: 20px 0;
+}
+
+.box .content .page span {
+  width: 82px;
+  height: 33px;
+  text-align: center;
+  line-height: 33px;
+  border: 1px solid #cfcfcf;
+  border-radius: 10px;
+}
+
+.box .content .page select {
+  width: 130px;
+  padding-left: 45px;
+}
+
+.box footer {
+  background-color: #f1f1f1;
+  height: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.box footer > a {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  text-align: center;
+  line-height: 38px;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+  border-right: 1px solid #c4c4c4;
+  color: #333333;
+}
+
+.box footer > a .fa {
+  font-size: 20px;
+}
+
+.box footer a:nth-child(3) {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  border-right: none;
+}
+
+.box .dow {
+  padding: 10px 0;
+  background-color: #efefef;
+}
+
+.box .dow p {
+  text-align: center;
+}
+
+.box .dow p a:nth-child(1) {
+  color: #ff0000;
+}
+/*# sourceMappingURL=youhui.css.map */

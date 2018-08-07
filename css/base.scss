@@ -21,7 +21,11 @@ h6,
 form,
 fieldset,
 legend,
+<<<<<<< HEAD
+img {
+=======
 img {  
+>>>>>>> 9d91f108eb531a1a86f5025a6c9fac06b41f0059
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -91,7 +95,11 @@ body {
 
 .hide,
 .none {
+<<<<<<< HEAD
+    display: none
+=======
     display: none   
+>>>>>>> 9d91f108eb531a1a86f5025a6c9fac06b41f0059
 }
 
 /*清除浮动*/
@@ -106,7 +114,11 @@ body {
 }
 
 .clearfix {
+<<<<<<< HEAD
+    zoom: 1;
+=======
     zoom: 1;    
+>>>>>>> 9d91f108eb531a1a86f5025a6c9fac06b41f0059
     /*IE678*/
 }
 

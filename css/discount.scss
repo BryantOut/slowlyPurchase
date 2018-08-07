@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'iconfont';
+    src: url('../fonts/iconfont.eot');
+    src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'), url('../fonts/iconfont.woff') format('woff'), url('../fonts/iconfont.ttf') format('truetype'), url('../fonts/iconfont.svg#iconfont') format('svg');
+}
+
+/*头部开始*/
+
+header {
+    width: 100%;
+    display: flex;
+    .head {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        background: rgb(255, 132, 29);
+        color: #fff;
+        align-items: center;
+        .back {
+            display: flex;
+            width: 50px;
+            a {
+                width: 40px; // background: red;
+                span.iconfont {
+                    font-family: 'iconfont';
+                    font-size: 20px;
+                    color: #fff;
+                    display: inline-block;
+                    font-weight: 100;
+                    padding: 8px 10px;
+                }
+            }
+        }
+        h1 {
+            flex: 1;
+            font-size: 20px;
+            text-align: center;
+        }
+        .home {
+            width: 60px; // background: green;
+            >a {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                >span.iconfont {
+                    font-family: 'iconfont';
+                    font-size: 20px;
+                }
+                p {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+/*头部结束*/
+
+/* 列表内容开始*/
+
+.list_concent {
+    #uls {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+            width: 50%;
+            padding: 10px 0;
+            border-right: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            text-align: center;
+            >a {
+                // width: 50%;
+                img {
+                    width: 140px;
+                    height: 140px;
+                    margin: 0 auto;
+                    display: block;
+                }
+                .title {
+                    font-size: 14px;
+                    font-weight: 700;
+                    height: 16px;
+                    line-height: 16px;
+                    text-align: center;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis; // width: 160px;
+                }
+                .subtit {
+                    font-size: 13px;
+                    color: #ff841d;
+                    padding: 6px 0;
+                }
+                .mall {
+                    color: gray;
+                    font-size: 12px;
+                }
+            }
+        }
+        li:nth-child(2n) {
+            border-right: none;
+        }
+    }
+}
+
+
+
+/* 列表内容结束*/
