@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/awfi/awfi.css">
+    <link rel="stylesheet" href="./css/awfi/Prolist.css">
+    <link rel="stylesheet" href="./js/layer_mobile/need/layer.css">
+    <script src="./js/layer_mobile/layer.js"></script>
+</head>
+
+<body>
+    <div class="entirety">
+
+        <div class="main">
+            <nav>
+                <div class="navigation">
+                    <a href="./index.html">首页</a> >
+                    <a href="listclass.html">全部分类</a> >
+                    <a href="#"></a> ></div>
+                <div class="filtrate">筛选</div>
+            </nav>
+            <ul class="product_list">
+                <!-- listTemp占位符 -->
+            </ul>
+            <div class="pagelist">
+
+                <span class="previous">上一页</span>
+                <div class="page">
+                    <em>
+                        <i></i>
+                         / 
+                        <i></i>
+                    </em>
+                    <ul class="page_ul hide">
+                    </ul>
+                </div>
+                <select id="selectPage" class="hide">
+                </select>
+                <img src="./images/switchover.png" alt="" class="switchover">
+
+                <span class="next">下一页</span>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+<script src="./js/template-web.js"></script>
+<script src="./js/zepto.js"></script>
+<!-- <script src="./js/jquery-1.12.2.js"></script> -->
+<script src="./js/Prolist.js"></script>
+
+<script type="text/template" id="listTemp">
+    {{each result value index}}
+    <a href="./Proarticle.html?id={{value.productId}}">
+    <li class="clearfix">
+        {{@value.productImg}}
+        <!-- <img src="./images/ic_pp.png" alt=""> -->
+        <div class="content">
+            <h3>{{value.productName}}</h3>
+            <p class="price">
+                <!-- <em>￥</em> -->
+                {{value.productPrice}}
+            </p>
+            <div class="offer_comment">
+                <span>报价({{value.productQuote}})</span>
+                <span>评论({{value.productCom}})</span>
+            </div>
+        </div>
+    </li>
+</a>
+    {{/each}}
+</script>
+
+</html>
