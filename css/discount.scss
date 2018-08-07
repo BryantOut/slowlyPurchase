@@ -46,7 +46,7 @@ header {
                 color: #fff;
                 >span.iconfont {
                     font-family: 'iconfont';
-                    font-size: 20px;
+                    font-size: 18px;
                 }
                 p {
                     font-size: 12px;
@@ -105,6 +105,39 @@ header {
     }
 }
 
-
-
 /* 列表内容结束*/
+
+/*底部开始*/
+
+footer {
+    background-color: #f1f1f1;
+    height: 38px;
+    display: flex;
+    >a {
+        flex: 2;
+        text-align: center;
+        line-height: 38px;
+        border-top: 1px solid #c4c4c4;
+        border-bottom: 1px solid #c4c4c4;
+        border-right: 1px solid #c4c4c4;
+        color: #333333;
+        .fa {
+            font-size: 20px;
+        }
+    }
+    a:nth-child(3) {
+        flex: 3;
+        border-right: none;
+    }
+}
+
+.dow {
+    padding: 10px 0;
+    background-color: #efefef;
+    p {
+        text-align: center;
+        a:nth-child(1) {
+            color: #ff0000;
+        }
+    }
+}
