@@ -23,15 +23,14 @@ $(function () {
     // 单击文本显示选项
 
     $('.showStore').on('click', function () {
-
         showOption('.store', '.area', '.price', '.showStore', '.showArea', '.showPrice');
     });
     $('.showArea').on('click', function () {
-        _self = this;
+
         showOption('.area', '.store', '.price', '.showArea', '.showStore', '.showPrice')
     });
     $('.showPrice').on('click', function () {
-        _self = this;
+
         showOption('.price', '.store', '.area', '.showPrice', '.showStore', '.showArea')
     })
 
@@ -118,6 +117,10 @@ $(function () {
 
     // 发送请求获取商品数据
     function getGoodsData_html(shopid, areaid) {
+        // 隐藏加载中的图片
+        $('.loading img').show();
+        // 显示加载更多
+        $('.loading a').hide().html('点击加载更多');
         $.ajax({
             type: "get",
             url: "http://193.112.55.79:9090/api/getgsproduct",
