@@ -1,19 +1,20 @@
 
 var num = 0;
 var index;
+var texiao;
 $.ajax({
     url: 'http://193.112.55.79:9090/api/getmoneyctrl',
     type: 'get',
     dataType: 'json',
     beforeSend: function () {
-        index = layer.open({
+      texiao = layer.open({
             type: 2
             , content: '玩命加载中'
         });
     },
     success: function (res) {
         //关闭提示框
-        layer.close(index);
+        layer.close(texiao);
         //拼接模板引擎
         var htmls = template('goods', { data: res.result });
         $('#tips').html(htmls);
@@ -27,6 +28,7 @@ $.ajax({
         //上一页点击事件
         $('.prey').on("touchstart", function () {
             index = $('#selectid').prop('selected', true).val();
+            index--;
             console.log(index);
             if (index == 1) {
                 layer.open({
@@ -36,7 +38,6 @@ $.ajax({
                   }); 
                 return;
             }
-            index--;
             // 发动ajax
             $.ajax({
                 url: 'http://193.112.55.79:9090/api/getmoneyctrl',
@@ -44,14 +45,14 @@ $.ajax({
                 dataType: 'json',
                 data: { "pageid": index },
                 beforeSend: function () {
-                    index = layer.open({
+                    texiao = layer.open({
                         type: 2
                         , content: '玩命加载中'
                     });
                 },
                 success: function (res) {
                       //关闭提示框
-                    layer.close(index);
+                    layer.close(texiao);
                     console.log(index);
                     var html3 = template('goods', { data: res.result });
                     console.log(html3)
@@ -80,14 +81,14 @@ $.ajax({
                 dataType: 'json',
                 data: { "pageid": index },
                 beforeSend: function () {
-                    index = layer.open({
+                    texiao = layer.open({
                         type: 2
                         , content: '玩命加载中'
                     });
                 },
                 success: function (res) {
                     //关闭提示框
-                    layer.close(index);
+                    layer.close(texiao);
                     var htmls = template('goods', { data: res.result });
                     $('#tips').html(htmls);
                     $('#selectid').val(index);
@@ -200,14 +201,14 @@ $("#selectid").on('change', function () {
     dataType:'json',
     data:{"pageid": pageid },
     beforeSend: function () {
-        index = layer.open({
+        texiao = layer.open({
             type: 2
             , content: '玩命加载中'
         });
     },
     success:function(res){
         //关闭提示框
-        layer.close(index);
+        layer.close(texiao);
         console.log(123)
         var htmls = template('goods', { data: res.result });
         $('#tips').html(htmls);

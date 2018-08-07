@@ -6,4 +6,4 @@ $.get("http://193.112.55.79:9090/api/getmoneyctrlproduct",{"productid":id},funct
     console.log(res);
     var html=template("goods",{data:res.result});
     $('#introduce').html(html);
-},"json")
+},"json");
