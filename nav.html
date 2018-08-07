@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./font/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a class="icon-l" href="./youhui.html">
+            <i class="fa fa-angle-left"></i>
+        </a>
+        <h1 id="1">
+            商城导航</h1>
+        <a class="xz" href="">
+            <img src="./images/xz1.png" alt="">
+        </a>
+    </header>
+    <div class="content clearfix">
+        <ul id="parameter">
+            <li>
+                <a href=""><img src="./images/dangdang.png" alt="">
+                    <span>京东商城</span></a>
+            </li>
+        </ul>
+    </div>
+    <footer>
+        <a href="">登录</a>
+        <a href="">注册</a>
+        <a href="#1">
+            <i class="fa fa-angle-double-up"></i>
+            返回顶部</a>
+    </footer>
+    <div class="dow">
+        <p>
+            <a href="">手机APP下载</a>
+            <a href="">慢慢买手机版</a> -- 掌上比价平台
+        </p>
+        <p>
+            m.manmanbuy.com
+        </p>
+    </div>
+</body>
+</html>
+<script type="text/template" id="navid">
+    {{each data value}}
+        <li>
+            <a href="{{value.navHref}}"><img src="{{value.navImg}}" alt="">
+                <span>{{value.navTitle}}</span>
+            </a>
+        </li>
+    {{/each}}
+</script>
+<script src='./js/jquery.js'></script>
+<script src='./js/art-template/template-web.js'></script>
+<script>
+    $.get(
+        "http://193.112.55.79:9090/api/getsitenav","",function(res){
+            console.log(res);
+            var html=template("navid",{data:res.result});
+            console.log(html);
+
+            $('#parameter').html(html);
+        },"json"
+    )
+</script>
