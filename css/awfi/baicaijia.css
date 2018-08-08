@@ -6,7 +6,7 @@
 
 .entirety header {
   height: 44px;
-  width: 100%;
+  width: 98%;
   background-color: #f4483e;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -30,7 +30,7 @@
   font-size: 0.24rem;
   line-height: 1;
   color: #fff;
-  margin-left: 10px;
+  margin-left: 2px;
 }
 
 .entirety header span:nth-child(3) {

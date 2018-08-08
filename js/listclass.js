@@ -8,14 +8,7 @@ $.ajax({
     type: 'get',
     url: "http://193.112.55.79:9090/api/getcategorytitle",
     dataType: 'json',
-    beforeSend: function () {
-        indexC = layer.open({
-            type: 2,
-            content: '分类加载中'
-        });
-    },
     success: function (res) {
-        layer.close(indexC);
          var htmlStr = template("temp",res);
          $('.main_ul').html(htmlStr);
     },
@@ -50,14 +43,14 @@ if(!$(this).next('.list_content').hasClass('hide')){
         url: "http://193.112.55.79:9090/api/getcategory",
         dataType: 'json',
         data:{'titleid':titleid},
-        beforeSend: function () {
-            indexC = layer.open({
-                type: 2,
-                content: '数据加载中'
-            });
-        },
+        // beforeSend: function () {
+        //     indexC = layer.open({
+        //         type: 2,
+        //         content: '数据加载中'
+        //     });
+        // },
         success: function (res) {
-            layer.close(indexC);
+            // layer.close(indexC);
          var listHtml = template('listTemp',res);
         _this.next('.list_content').html(listHtml);
         },

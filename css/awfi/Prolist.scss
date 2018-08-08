@@ -1,8 +1,79 @@
 @import "awfi.scss";
+.tier{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(30,66,112,.9);
+    z-index:9999;
+    display: none;
+    .close{
+        position: absolute;
+        right:20px;
+        top:10px;
+    }
+    .rhythmDown{
+        position: absolute;
+        bottom:10%;
+        left:1%;
+        width: 98%;
+        height: 3px;
+        display: flex;
+        justify-content: space-between;
+        i{
+            width: 2px;
+            height: 1px;
+            background-color: #fff;
+            border-radius:10%;
+            transition: all .3s;
+        }
+    }
+    .title{
+        width: 100%;
+        text-align:center;
+        font-size:50px;
+        color:#fff;
+        line-height: 50px;
+        margin:15% 0 15%;
+    }
+    ul{
+        list-style: none;
+        li{
+            width: 100%;
+            text-align:center;
+            font-size:22px;
+            color:#fff;
+            line-height: 22px;
+            margin-bottom:10%;
+        }
+    }
+    .foucSearch{
+        width: 50%;
+        height:35px;
+        border: 1px solid #ccc;
+        margin-top:5%;
+        margin-left:25%;
+        text-align:center;
+        background-color:rgba(0,0,0,0);
+        color:#fff;
+        font-size: 14px;;
+    }
+    audio{
+        position: fixed;
+        top:-50px;
+        left:-100px;
+    }
+}
 .entirety{
     width: 100%;
     .main{
         width: 100%;
+        audio{
+            position:fixed;
+            left:-200px;
+            bottom:-100px;
+        }
         nav{
             height: 40px;
             width: 100%;
@@ -88,54 +159,25 @@
                 }
             }
         }
-        .pagelist{
-            width: 100%;
-            height: 35px;
-            display: flex;
-            justify-content:space-around;
-            margin:20px 0;
-            position: relative;
-            .switchover{
-            position: absolute;
-            right:15px;
-            top:-35px;
-            width: 25px;
-            height: 25px;
-            }
-            span{
-                width: 25%;
-                text-align:$textalign;
-                line-height: 35px;
-                border-radius:5px;
-                border:1px solid #c3c3c3;
-                background-image: linear-gradient(to top,#d8d8d8,#efefef);
-                box-shadow: 0px 1px 1px #ccc;
-            }
-            .page{
-                width: 20%;
-                font-size:14px;
-                line-height: 35px;
-                text-align:$textalign;
-                @include bgc($white); 
-                position: relative;
-                border: 1px solid #999;
-                .page_ul{
-                    position: absolute;
-                    left:0;
-                    // top:35px;
-                    bottom:34px;  
-                    width: 100%;
-                    background-color: $white; 
-                    z-index:9999;
-                    border: 1px solid #999;
-                    // border-top:none;
-                    border-bottom:none;
-                }
-            }
-            #selectPage{
-                width: 85px;
-                padding-left: 22px
-            }
+        .loading{
+            margin:10px auto 0;
+            display: block;
+            display: none;
+            width: 45px;
+            height: 45px;
         }
     }
 } 
+@font-face {
+    font-family: 'close';
+    src: url('../../font/awfi/close/ficonfont.eot');
+    src: url('../../font/awfi/close/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../../font/awfi/close/iconfont.woff') format('woff'),
+    url('../../font/awfi/close/iconfont.ttf') format('truetype'),
+    url('../../font/awfi/close/iconfont.svg#iconfont') format('svg');
+  }
+.iconfont{
+    font-family:"close" !important;
+    font-size:35px;font-style:normal;
+    color:#fff;
+  }

@@ -1,10 +1,9 @@
 if (location.search == "") {
-    location.href = "./listclass.html";
+    location.href = "./category.html";
 }
 
 //提取当前页ID
 var searchStr = location.search;
-
 var obj={};
 var itemArr = searchStr.substr(1).split("&");
 for(var i=0;i<itemArr.length;i++){

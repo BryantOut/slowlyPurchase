@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>慢慢买</title>
+  <link href="./lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/kd-youhuijuan.css">
+
+  <!--[if lt IE 9]>
+      <script src="./lib/html5shiv/html5shiv.min.js"></script>
+      <script src="./lib/respond/respond.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <div class="header">
+    <a class="glyphicon glyphicon-menu-left" href=""></a>
+    <span>优惠券</span>
+    <a  href="javascript:;">
+      <img src="./images/header_app.png" alt="">
+    </a>
+  </div>
+  <div class="cate">
+    <ul>
+    </ul>
+  </div>
+  <div class="title">--点餐前出示手中的优惠券,即可享受优惠--</div>
+  <div class="cate">
+    <div class="cate-all">
+
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner" role="listbox">
+               
+              </div>
+            
+              <!-- Controls -->
+              <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+  <script type="text/template" id="liTemplate">
+          <% for(var i=0;i<result.length;i++){ %>
+             <a class="cate-parents " data-toggle="modal" data-target="#myModal">
+                <div class="left">
+                    {{#result[i].couponProductImg}}
+                </div>
+                <div class="right">
+                    <p><%=result[i].couponProductName%></p>
+                    <p><%=result[i].couponProductPrice%></p>
+                    <p><%=result[i].couponProductTime%></p>
+                    <span class="glyphicon glyphicon-menu-right"></span>
+                </div>
+              </a>
+          <% } %>
+        </script>
+  <script type="text/template" id="bannerTemplate">
+      <% for(var i=0;i<result.length;i++){ %>
+             <div class="item <%=i==0?'active':''%>">
+                  {{#result[i].couponProductImg}}
+             </div>
+      <% } %>
+  </script>
+  <script src="./lib/jquery/jquery.js"></script>
+  <script src="./lib/bootstrap/js/bootstrap.js"></script>
+  <script src="./public/art-template/template-web.js"></script>
+  <script src="./js/kd-youhuijuan.js"></script>
+</body>
+
+</html>

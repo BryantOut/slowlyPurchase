@@ -1,63 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>白菜价 - 慢慢买</title>
-    <link rel="shortcut icon" href="./favicon.ico">
-    <link rel="stylesheet" href="./font/awfi/iconfont.css">
+    <title>白菜价--优惠券</title>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./font/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/awfi/awfi.css">
-    <link rel="stylesheet" href="./css/awfi/baicaijia.css">
-    <link rel="stylesheet" href="./js/layer_mobile/need/layer.css">
-    <script type="text/javascript" src="./js/iscroll.js"></script>
-    <style>
-    </style>
+    <link rel="stylesheet" href="./css/baicai.css">
+    <link rel="stylesheet" href="./lib/swipe/swiper.min.css">
 </head>
-<body >
 
-    <div class="entirety">
-        <header>
-            <span class="iconfont icon-zuojiantou"></span>
-            <h2>白菜价 - 淘宝内部券</h2>
-            <span></span>
-        </header>
-        <nav>
-            <div id="wrapper">
-                <ul id="wrapperUL">
-                </ul>
-            </div>
-        </nav>
-        <div class="content">
+<body id="top">
+    <!-- 头部 -->
+    <header>
+        <div class="main">
+            <a href="javascript:;">
+                <h2>白菜价</h2>
+            </a>
+            <input type="text" name="" placeholder="好宝贝 等你搜" id="">
+            <i class="fa fa-list-ul"></i>
 
         </div>
-        
-</div>
-</body>
-<script src="./js/template-web.js"></script>
-<!-- <script src="./js/jquery-1.12.2.js"></script> -->
-<script src="./js/zepto.js"></script>
-<script src="./js/baicaijia.js"></script>
-<script src="./js/layer_mobile/layer.js"></script>
-<script type="text/template" id="navTpme">
-     {{each result value}}
-     <li data-id="{{value.titleId}}"> {{value.title}} </li>
-     {{/each}}
-</script>
-<script type="text/template" id="boxTemp">
-    {{each result value}}
-    <div class="box">
-        {{@value.productImg}}
-        <div class="info">
-            <div class="title">{{@value.productName}}</div>
-            <div class="price">{{@value.productPrice}}</div>
-            {{@value.productCouponRemain}}
-            <div class="url">
-                {{@value.productCoupon}}{{@value.productHref}}
+
+    </header>
+    <!-- 全部分类 -->
+    <div id="all_classify">
+        <div>
+            <div class="taxon_placeholder">
+                <!-- 分类模板占位 -->
             </div>
+            <div class="taxon_none">收起分类</div>
         </div>
     </div>
-    {{/each}}    
-</script>
+        <!-- 轮播图 -->
+        <div class="solid swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./images/1.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/2.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/3.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/4.png" alt="">
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+    <!-- 分类 -->
+    <div class="classify">
+        <ul>
+            <li>
+                <a href="javascript:;">
+                    <img src="./images/hot.png" alt=""> 热销
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <img src="./images/9-9.png" alt=""> 9.9包邮
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <img src="./images/19.png" alt=""> 19块包邮
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <img src="./images/renqi.png" alt=""> 超级人气榜
+                </a>
+            </li>
+
+        </ul>
+    </div>
+    <div class="line"></div>
+
+    <div class="line"></div>
+    <!--  超级人气榜 -->
+    <div class="renqi">
+        <div class="title">
+            <h5>超级人气榜</h5>
+            <a href="javascript:;">更多</a>
+        </div>
+        <div id="wrapper" class="content ">
+            <ul>
+                <li>
+                    <a href="javascript:;">
+                        <img src="./images/O1CN011N6CT2VVlwoEgEg_!!1969791520.jpg_250x250.jpg" alt="">
+                        <div>整整一大瓶</div>
+                        <span>¥6.9</span>
+                        <span>券后</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="./images/O1CN011N6CT2VVlwoEgEg_!!1969791520.jpg_250x250.jpg" alt="">
+                        <div>整整一大瓶</div>
+                        <span>¥6.9</span>
+                        <span>券后</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="./images/O1CN011N6CT2VVlwoEgEg_!!1969791520.jpg_250x250.jpg" alt="">
+                        <div>整整一大瓶</div>
+                        <span>¥6.9</span>
+                        <span>券后</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="./images/O1CN011N6CT2VVlwoEgEg_!!1969791520.jpg_250x250.jpg" alt="">
+                        <div>整整一大瓶</div>
+                        <span>¥6.9</span>
+                        <span>券后</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="./images/O1CN011N6CT2VVlwoEgEg_!!1969791520.jpg_250x250.jpg" alt="">
+                        <div>整整一大瓶</div>
+                        <span>¥6.9</span>
+                        <span>券后</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="./images/O1CN011N6CT2VVlwoEgEg_!!1969791520.jpg_250x250.jpg" alt="">
+                        <div>整整一大瓶</div>
+                        <span>¥6.9</span>
+                        <span>券后</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="./images/O1CN011N6CT2VVlwoEgEg_!!1969791520.jpg_250x250.jpg" alt="">
+                        <div>整整一大瓶</div>
+                        <span>¥6.9</span>
+                        <span>券后</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="line"></div>
+    <!-- 商家优惠 -->
+    <div class="discounts">
+        <div class="title">
+            <h5>商家优惠信息 实时直播</h5>
+            <span>6263</span>
+        </div>
+        <div class="content">
+            <ul>
+                <!-- 商品模板 -->
+            </ul>
+        </div>
+    </div>
+    <footer class="foot">
+        <div class="top">
+            <a href="javascript:;">登录</a>
+            <a href="javascript:;">注册</a>
+            <a href="#top">
+                <span class="fa fa-arrow-circle-up"></span>返回顶部</a>
+        </div>
+        <div class="bottom">
+            <div>
+                <a href="javascript:;">手机APP下载</a>
+                <span>慢慢买比价网-手机版 -- 掌上比价平台</span>
+            </div>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+
+</body>
+
 </html>
+<script src="./lib/iscroll.js"></script>
+<script src="./lib/zepto.min.js"></script>
+<script src="./lib/template-web.js"></script>
+<script src="./js/baicai.js"></script>
+<script src="./lib/swipe/swiper.min.js"></script>
+<!-- 分类模板 -->
+<script type="text/template" id="taxon_template">
+    {{each data as val }}
+    <a titleId="{{val.titleId}}" class="taxon" href="javascript:;">{{val.title}}</a>
+    {{/each}}
+</script>
+<!-- 商品模板 -->
+<script type="text/template" id="goods_template">
+    {{each data as val }}
+    <li>
+        <a productId="{{val.productId}}" href="javascript:;">
+            {{@ val.productImg}}
+            <div class="store">{{@ val.productName}}</div>
+            <div class="price">
+                <span>￥{{@ val.productPrice}}</span>
+                <span> {{@ val.productCouponRemain}}人已买</span>
+            </div>
+            <div class="coupon">
+                券 ¥{{@ val.productCoupon}}
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>

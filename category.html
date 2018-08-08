@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>产品分类 - 慢慢买</title>
+    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/awfi/awfi.css">
+    <link rel="stylesheet" href="./css/awfi/listclass.css">
+    <link rel="stylesheet" href="./js/layer_mobile/need/layer.css">
+    <script src="./js/layer_mobile/layer.js"></script>
+</head>
+<body id="top">
+    <div class="entirety">
+           <!-- 头部 -->
+    <header>
+        <h1 class="log">
+            <a href="./index.html">
+                <img src="./images/mmbuy_log.png" alt="">
+            </a>
+        </h1>
+        <a class="appDown" href="javascript:;">
+            <img src="./images/mmbuy_app_down.png" alt="">
+        </a>
+    </header>
+    <!-- 搜索栏 -->
+    <div class="search">
+        <input type="text" name="" id="" placeholder="请输入你想比价的商品">
+        <button>搜索</button>
+    </div>
+
+        <div class="main">
+              <ul class="main_ul"></ul>
+        </div> 
+
+        <footer class="foot">
+            <div class="top">
+                <a href="javascript:;">登录</a>
+                <a href="javascript:;">注册</a>
+                <a href="#top">
+                    <span class="fa fa-arrow-circle-up"></span>返回顶部</a>
+            </div>
+            <div class="bottom">
+                <div>
+                    <a href="javascript:;">手机APP下载</a>
+                    <span>慢慢买比价网-手机版 -- 掌上比价平台</span>
+                </div>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </footer>
+
+    </div>
+</body>
+<script src="./js/template-web.js"></script>
+<!-- <script src="./js/jquery-1.12.2.js"></script> -->
+<script src="./js/zepto.js"></script>
+<script src="./js/listclass.js"></script>
+
+
+<!-- 大分类渲染模版引擎 -->
+<script type="text/template" id="temp">
+   {{each result value index}}
+        <li class="main_ul_li">
+                <input type="hidden" value="{{value.titleId}}">
+                <div class="list_title">
+                    <h2 class="title">{{value.title}}</h2>
+                    <img src="./images/arrow1.gif" alt="" class="img1">
+                    <img src="./images/arrow2.gif" alt="" class="img2 hide">
+                </div>
+                <!-- <ul class="list_content clearfix hide">
+                 </ul> -->
+            </li>
+            <ul class="list_content clearfix hide">
+            </ul>
+    {{/each}}
+</script>
+
+<!-- 小分类渲染模版引擎 -->
+<script type="text/template" id="listTemp">
+    {{each result value index}}
+        <li><a href="Prolist.html?id={{value.categoryId}}">{{value.category}}</a></li>
+     {{/each}}
+ </script>
+
+</html>

@@ -39,6 +39,7 @@ header {
         position: relative;
         a {
             position: absolute;
+            color:#fff;
             top: 22%;
             left: 4%;
             width: 30px;
@@ -87,6 +88,7 @@ header {
             background-color: #fff;
             font-size: 14px;
             ul {
+                width: 100%;
                 li {
                     height: 30px;
                     line-height: 30px;
@@ -99,7 +101,7 @@ header {
                     width: 20px;
                     height: 20px;
                     display: inline-block;
-                    background-image: url("../images/check.jpg");
+                    background-image: url("../images/check.png");
                     background-repeat: no-repeat;
                     background-size: 100%;
                     margin-top: 10px;
@@ -116,9 +118,9 @@ header {
 .content {
     flex: 1;
     height: 100%;
-    overflow: scroll;
+
     .main {
-        // margin-top: 85px;
+        margin-top: 85px;
         background-color: #f1f1f1;
         .goods {
             width: 46%;

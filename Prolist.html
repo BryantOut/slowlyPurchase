@@ -12,42 +12,110 @@
     <link rel="stylesheet" href="./css/awfi/Prolist.css">
     <link rel="stylesheet" href="./js/layer_mobile/need/layer.css">
     <script src="./js/layer_mobile/layer.js"></script>
+    <script src="./js/tap.js"></script>
 </head>
 
 <body>
+<div class="tier">
+    <span class="close iconfont">&#xe60d;</span>
+                <div class="title">choose</div>
+                <ul>
+                    <li>比价搜索</li>
+                    <li>省钱控</li>
+                    <li>国内折扣</li>
+                    <li>白菜价</li>
+                    <li>凑单品</li>
+                </ul>
+                <input type="text" class="foucSearch" placeholder="请输入需要搜索的内容">
+        
+                <div class="rhythmDown">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </div>
+</div>
+
+
     <div class="entirety">
+
+    <!-- 头部 -->
+    <header>
+            <h1 class="log">
+                <a href="./index.html">
+                    <img src="./images/mmbuy_log.png" alt="">
+                </a>
+            </h1>
+            <a class="appDown" href="javascript:;">
+                <img src="./images/mmbuy_app_down.png" alt="">
+            </a>
+    </header>
+
+    <!-- 搜索栏 -->
+        <div class="search">
+            <input type="text" name="" id="" placeholder="点我可以搜索喔">
+            <button>搜索</button>
+        </div>
 
         <div class="main">
             <nav>
                 <div class="navigation">
                     <a href="./index.html">首页</a> >
-                    <a href="listclass.html">全部分类</a> >
+                    <a href="category.html">全部分类</a> >
                     <a href="#"></a> ></div>
                 <div class="filtrate">筛选</div>
             </nav>
             <ul class="product_list">
                 <!-- listTemp占位符 -->
             </ul>
-            <div class="pagelist">
-
-                <span class="previous">上一页</span>
-                <div class="page">
-                    <em>
-                        <i></i>
-                         / 
-                        <i></i>
-                    </em>
-                    <ul class="page_ul hide">
-                    </ul>
-                </div>
-                <select id="selectPage" class="hide">
-                </select>
-                <img src="./images/switchover.png" alt="" class="switchover">
-
-                <span class="next">下一页</span>
-            </div>
-
+            <img src="./images/loading.gif" alt="" class="loading">
         </div>
+
+        <footer class="foot">
+                <div class="top">
+                    <a href="javascript:;">登录</a>
+                    <a href="javascript:;">注册</a>
+                    <a href="#top">
+                        <span class="fa fa-arrow-circle-up"></span>返回顶部</a>
+                </div>
+                <div class="bottom">
+                    <div>
+                        <a href="javascript:;">手机APP下载</a>
+                        <span>慢慢买比价网-手机版 -- 掌上比价平台</span>
+                    </div>
+                    <p>m.manmanbuy.com</p>
+                </div>
+        </footer>
 
     </div>
 </body>
@@ -55,6 +123,7 @@
 <script src="./js/zepto.js"></script>
 <!-- <script src="./js/jquery-1.12.2.js"></script> -->
 <script src="./js/Prolist.js"></script>
+    <script src="./js/search.js"></script>
 
 <script type="text/template" id="listTemp">
     {{each result value index}}

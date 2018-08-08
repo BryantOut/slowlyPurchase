@@ -129,4 +129,95 @@ body {
 .pr {
   position: relative;
 }
+
+/* 头部 */
+header {
+  height: 40px;
+  background-color: #ff841d;
+  padding: 5px 10px;
+}
+
+header img {
+  width: 100%;
+}
+
+header .log {
+  width: 190px;
+  float: left;
+}
+
+header .appDown {
+  width: 40px;
+  float: right;
+}
+
+/* 搜索栏 */
+.search {
+  border-bottom: 1px solid #f1f1f1;
+  padding: 13px;
+  font-size: 16px;
+  position: relative;
+  background-color: #fff;
+}
+
+.search input {
+  height: 30px;
+  line-height: 30px;
+  background-color: #f1f1f1;
+  width: 100%;
+  border-radius: 15px;
+  padding-left: 20px;
+}
+
+.search button {
+  position: absolute;
+  top: 13px;
+  right: 10px;
+  background-color: #ff841d;
+  width: 60px;
+  height: 30px;
+  border-radius: 15px;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  font-size: 16px;
+}
+
+/* 底部 */
+.foot {
+  padding-top: 10px;
+}
+
+.foot .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.foot .top a {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  font-size: 14px;
+  border-right: 1px solid #c4c4c4;
+}
+
+.foot .top a:last-child {
+  border-right: none;
+}
+
+.foot .bottom {
+  text-align: center;
+  padding: 20px;
+}
+
+.foot .bottom div a {
+  display: inline-block;
+  color: red;
+}
 /*# sourceMappingURL=base.css.map */

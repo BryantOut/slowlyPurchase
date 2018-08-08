@@ -2,12 +2,98 @@ body {
   background-color: #f2f2f2;
 }
 
+.tier {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 66, 112, 0.9);
+  z-index: 9999;
+  display: none;
+}
+
+.tier .close {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+.tier .rhythmDown {
+  position: absolute;
+  bottom: 10%;
+  left: 1%;
+  width: 98%;
+  height: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.tier .rhythmDown i {
+  width: 2px;
+  height: 1px;
+  background-color: #fff;
+  border-radius: 10%;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.tier .title {
+  width: 100%;
+  text-align: center;
+  font-size: 50px;
+  color: #fff;
+  line-height: 50px;
+  margin: 15% 0 15%;
+}
+
+.tier ul {
+  list-style: none;
+}
+
+.tier ul li {
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+  color: #fff;
+  line-height: 22px;
+  margin-bottom: 10%;
+}
+
+.tier .foucSearch {
+  width: 50%;
+  height: 35px;
+  border: 1px solid #ccc;
+  margin-top: 5%;
+  margin-left: 25%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+  color: #fff;
+  font-size: 14px;
+}
+
+.tier audio {
+  position: fixed;
+  top: -50px;
+  left: -100px;
+}
+
 .entirety {
   width: 100%;
 }
 
 .entirety .main {
   width: 100%;
+}
+
+.entirety .main audio {
+  position: fixed;
+  left: -200px;
+  bottom: -100px;
 }
 
 .entirety .main nav {
@@ -108,61 +194,24 @@ body {
   margin-right: 7px;
 }
 
-.entirety .main .pagelist {
-  width: 100%;
-  height: 35px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  margin: 20px 0;
-  position: relative;
+.entirety .main .loading {
+  margin: 10px auto 0;
+  display: block;
+  display: none;
+  width: 45px;
+  height: 45px;
 }
 
-.entirety .main .pagelist .switchover {
-  position: absolute;
-  right: 15px;
-  top: -35px;
-  width: 25px;
-  height: 25px;
+@font-face {
+  font-family: 'close';
+  src: url("../../font/awfi/close/ficonfont.eot");
+  src: url("../../font/awfi/close/iconfont.eot?#iefix") format("embedded-opentype"), url("../../font/awfi/close/iconfont.woff") format("woff"), url("../../font/awfi/close/iconfont.ttf") format("truetype"), url("../../font/awfi/close/iconfont.svg#iconfont") format("svg");
 }
 
-.entirety .main .pagelist span {
-  width: 25%;
-  text-align: center;
-  line-height: 35px;
-  border-radius: 5px;
-  border: 1px solid #c3c3c3;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#d8d8d8), to(#efefef));
-  background-image: linear-gradient(to top, #d8d8d8, #efefef);
-  -webkit-box-shadow: 0px 1px 1px #ccc;
-          box-shadow: 0px 1px 1px #ccc;
-}
-
-.entirety .main .pagelist .page {
-  width: 20%;
-  font-size: 14px;
-  line-height: 35px;
-  text-align: center;
-  background-color: #fff;
-  position: relative;
-  border: 1px solid #999;
-}
-
-.entirety .main .pagelist .page .page_ul {
-  position: absolute;
-  left: 0;
-  bottom: 34px;
-  width: 100%;
-  background-color: #fff;
-  z-index: 9999;
-  border: 1px solid #999;
-  border-bottom: none;
-}
-
-.entirety .main .pagelist #selectPage {
-  width: 85px;
-  padding-left: 22px;
+.iconfont {
+  font-family: "close" !important;
+  font-size: 35px;
+  font-style: normal;
+  color: #fff;
 }
 /*# sourceMappingURL=Prolist.css.map */

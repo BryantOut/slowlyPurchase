@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="Keywords" content="慢慢买,比价网,导购网站平台,数码比价,家电比价，购物比价">
+  <meta name="Description" content="慢慢买是一个专业的购物导购、比价网站，汇集了所有主流网上商城的报价、活动促销、历史价格走势等信息。慢慢买倡导理性消费，以让用户买到高性比价商品为宗旨的比价网。">
+  <title>慢慢买</title>
+  <link href="./lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/youhuijuan.css">
+
+  <!--[if lt IE 9]>
+      <script src="./lib/html5shiv/html5shiv.min.js"></script>
+      <script src="./lib/respond/respond.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <div class="header">
+    <a class="glyphicon glyphicon-menu-left" href="./index.html"></a>
+    <span>优惠券</span>
+    <a>
+      <img src="./images/header_app.png" alt="">
+    </a>
+  </div>
+  <div class="cate">
+    <ul>
+      <!-- <li>
+          <a href="">
+            <img src="" alt="">
+            <p></p>
+          </a>
+        </li> -->
+    </ul>
+
+  </div>
+  <div class="title">
+    <a href="./index.html">首页</a>
+    <span>></span>
+    <span>优惠券</span>
+  </div>
+  <div class="nav">
+    <ul>
+      <li class="dl">
+        <a href="">登录</a>
+      </li>
+      <li>注册</li>
+      <li>
+        <a href="#">
+          <span class="glyphicon glyphicon-arrow-up"></span>
+          返回顶部</a>
+      </li>
+    </ul>
+  </div>
+  <div class="footer">
+    <p>
+      <span>手机APP下载</span>
+      <span>慢慢买手机版</span>
+      <span>--掌上比价平台</span>
+    </p>
+    <p>m.manmanbuy.com </p>
+  </div>
+  <script type="text/template" id="liTemplate">
+    <!-- <% for(var i=0;i<result.length;i++){ %>
+         <li>
+          <a href='<%=result[i].couponLink%>?id="<%=result[i].couponId%>"' >
+            <img src="<%=result[i].couponImg%>" alt="">
+            <p><%=result[i].couponTitle%></p>
+          </a>
+        </li>
+      <% } %> -->
+    <% for(var i=0;i<result.length;i++){ %>
+      <li>
+        <a href='./kd-youhuijuan.html?id=<%=result[i].couponId%>' class="imgId">
+          <img src="<%=result[i].couponImg%>" alt="">
+          <p>
+            <%=result[i].couponTitle%>
+          </p>
+        </a>
+      </li>
+      <% } %>
+  </script>
+  <script src="./lib/jquery/jquery.js"></script>
+  <script src="./lib/bootstrap/js/bootstrap.js"></script>
+  <script src="./lib/arttemplate/template-web.js"></script>
+  <script src="./js/youhuijuan.js"></script>
+</body>
+
+</html>
