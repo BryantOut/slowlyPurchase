@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        慢慢买比价网--手机版
+    </title>
+    <link rel="shortcut icon" href="./favicon.ico">
+    <!-- 引入初始化css -->
+    <link rel="stylesheet" href="./css/base.css">
+    <!-- 引入当前页面的css -->
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- 引入字体图标 -->
+    <link rel="stylesheet" href="./font/font-zpy/iconfont.css">
+</head>
+
+<body>
+    <!-- 首页头部 -->
+    <header class="clearfix">
+        <div class="logo">
+            <a href="javascript:;">
+                <img src="./images/header_logo.png" alt="" title="慢慢买比价网--手机版">
+            </a>
+        </div>
+        <div class="appdown">
+            <a href="javascript:;">
+                <img src="./images/header_app.png" alt="" title="手机app下载">
+            </a>
+        </div>
+    </header>
+
+    <!-- 搜索框 -->
+    <div class="head">
+        <form action="">
+            <div class="search">
+                <div class="searchtxt">
+                    <input type="search" placeholder="请输入你想比价的商品">
+                </div>
+                <div class="searchbtn">
+                    <input type="submit" value="搜索">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!--分类 -->
+    <div class="classify clearfix">
+        <!-- 准备一个模板引擎 -->
+        <script type="text/x-art-template" id="tmpl">
+            {{each comments}}
+            <a href="{{$value[" titlehref "]}}">
+                <div class="pic">
+                    {{@ $value["img"]}}
+                </div>
+                <p>{{$value["name"]}}</p>
+            </a>
+            {{/each}}
+        </script>
+    </div>
+
+    <!-- 促销 -->
+    <div class="sale">
+        <div class="title-all">
+            <div class="left">
+                <a href="#">超值折扣推荐</a>
+            </div>
+            <div class="right">
+                <i class="iconfont">&#xe783;</i>
+            </div>
+        </div>
+        <div class="sale-content">
+            <ul class="contnetUl">
+                <!-- 准备一个模板引擎 -->
+                <script type="text/x-art-template" id="tmpl1">
+                    {{each comments}}
+                    <li>
+                        <a href="{{$value[" productFrom "]}}">
+                            <div class="pic">
+                                {{@ $value["productImg2"]}}
+                            </div>
+                            <div class="info clearfix">
+                                <div class="title">
+                                    {{$value["productName"]}}
+                                    <span>{{$value["productPinkage"]}}</span>
+                                </div>
+                                <div class="other">
+                                    <div class="mall">{{$value["productFrom"]}} | {{$value["productTime"]}}</div>
+                                    <div class="comment">
+                                        <i class="iconfont">&#xe650;</i>
+                                        <i>{{$value["productComCount"]}}</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    {{/each}}
+                </script>
+            </ul>
+
+        </div>
+    </div>
+
+    <!-- 更多优惠信息 -->
+    <div class="more">
+        <a href="toolActivity.html">更多优惠信息 »</a>
+    </div>
+
+    <!-- 品牌排行 -->
+    <div class="title-all">
+        <div class="left">
+            <a href="#">品牌排行</a>
+        </div>
+        <div class="right">
+            <i class="iconfont">&#xe783;</i>
+        </div>
+    </div>
+
+    <!-- 按钮 -->
+    <div class="button clearfix">
+        <a href="#" class="in">登录</a>
+        <a href="#" class="sign">注册</a>
+        <a href="#" class="top">
+            <img src="./images/top.png">回到顶部</a>
+    </div>
+
+    <!-- 底部 -->
+    <footer>
+        <p>
+            <a href="#">手机下载</a>
+            <a href="#"> 慢慢买手机版</a>
+            -- 掌上比价平台</p>
+        <p>
+            m.manmanbuy.com
+        </p>
+    </footer>
+</body>
+<script src="./js/plugin/art-template/template-web.js"></script>
+<script src="./js/zepto.js"></script>
+<script src="./js/index.js"></script>
+<script src="./js/index1.js"></script>
+
+
+</html>

@@ -1,0 +1,272 @@
+@charset "UTF-8";
+/* 字体图标 */
+@font-face {
+  font-family: 'iconfont';
+  src: url("iconfont.eot");
+  src: url("iconfont.eot?#iefix") format("embedded-opentype"), url("iconfont.woff") format("woff"), url("iconfont.ttf") format("truetype"), url("iconfont.svg#iconfont") format("svg");
+}
+
+/* 首页头部 */
+header {
+  height: 50px;
+  background-color: #ff841d;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+header .logo {
+  width: 75%;
+  float: left;
+  padding: 12px;
+  margin-left: 5px;
+}
+
+header .logo img {
+  max-width: 185px;
+  max-height: 25px;
+}
+
+header .appdown {
+  float: right;
+  padding: 7px;
+}
+
+header .appdown a {
+  color: #5a5a5a;
+}
+
+header .appdown a img {
+  max-width: 34px;
+  overflow: hidden;
+}
+
+/* 搜索框 */
+.head form .search {
+  border-bottom: 1px solid #e6e6e6;
+  height: 30px;
+  padding: 10px;
+  position: relative;
+}
+
+.head form .search .searchtxt input {
+  background: #f1f1f1;
+  border-radius: 15px;
+  padding-left: 10px;
+  line-height: 30px;
+  width: 90%;
+  font-size: 16px;
+}
+
+.head form .search .searchbtn input {
+  width: 63px;
+  line-height: 30px;
+  background: #ff841d;
+  color: #FFFFFF;
+  border-radius: 15px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 16px;
+}
+
+/* 分类 */
+.classify {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.classify a {
+  width: 25%;
+  color: #5a5a5a;
+  font-size: 13px;
+  text-align: center;
+  padding: 5px 0;
+}
+
+.classify a .pic {
+  width: 100%;
+}
+
+.classify a .pic img {
+  display: block;
+  width: 50px;
+  margin: 0 auto;
+  padding-bottom: 5px;
+}
+
+/* 促销 */
+.sale .title-all {
+  background-color: #ff9000;
+  height: 35px;
+  line-height: 35px;
+  color: #fff;
+  font-size: 18px;
+  padding: 0 15px;
+}
+
+.sale .title-all .left {
+  float: left;
+}
+
+.sale .title-all .left a {
+  color: #fff;
+}
+
+.sale .title-all .right {
+  float: right;
+}
+
+.sale .title-all .right .iconfont {
+  font-size: 18px;
+  font-family: "iconfont" !important;
+}
+
+.sale .sale-content .contnetUl {
+  margin-bottom: 10px;
+}
+
+.sale .sale-content .contnetUl li {
+  padding: 10px;
+}
+
+.sale .sale-content .contnetUl li .pic {
+  float: left;
+}
+
+.sale .sale-content .contnetUl li .pic img {
+  width: 100px;
+  height: 100px;
+}
+
+.sale .sale-content .contnetUl li .info {
+  padding-left: 122px;
+}
+
+.sale .sale-content .contnetUl li .info .title {
+  color: #333333;
+  font-size: 15px;
+}
+
+.sale .sale-content .contnetUl li .info .title span {
+  color: #ff6c00;
+}
+
+.sale .sale-content .contnetUl li .info .other {
+  padding-top: 30px;
+  line-height: 20px;
+}
+
+.sale .sale-content .contnetUl li .info .other .mall {
+  float: left;
+  font-size: 12px;
+}
+
+.sale .sale-content .contnetUl li .info .other .comment {
+  float: right;
+  font-size: 16px;
+  color: #a1a1a1;
+}
+
+.sale .sale-content .contnetUl li .info .other .comment i {
+  float: left;
+  font-size: 12px;
+}
+
+.sale .sale-content .contnetUl li .info .other .comment .iconfont {
+  display: block;
+  font-family: "iconfont";
+  color: #ccc;
+  font-size: 16px;
+}
+
+/* 更多优惠信息 */
+.more {
+  padding: 0 10px 20px 10px;
+}
+
+.more a {
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #e6e6e6;
+  text-align: center;
+  display: block;
+  background: #F4F4F4;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+/* 品牌排行 */
+.title-all {
+  background-color: #ff9000;
+  height: 35px;
+  line-height: 35px;
+  color: #fff;
+  font-size: 18px;
+  padding: 0 15px;
+}
+
+.title-all .left {
+  float: left;
+}
+
+.title-all .left a {
+  color: #fff;
+}
+
+.title-all .right {
+  float: right;
+}
+
+.title-all .right .iconfont {
+  font-size: 18px;
+  font-family: "iconfont" !important;
+}
+
+/* 按钮 */
+.button {
+  background: #efefef;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+  height: 34px;
+  line-height: 34px;
+  margin-top: 25px;
+}
+
+.button a {
+  display: block;
+  float: left;
+  font-size: 14px;
+  border-right: 1px solid #c4c4c4;
+  text-align: center;
+  width: 30%;
+}
+
+.button .top {
+  border-right: none;
+}
+
+.button .top img {
+  width: 15px;
+  height: 15px;
+}
+
+/* 底部 */
+footer {
+  text-align: center;
+  margin-top: 10px;
+}
+
+footer p a:nth-child(1) {
+  color: red;
+}
+/*# sourceMappingURL=index.css.map */

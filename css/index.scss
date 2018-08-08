@@ -1,0 +1,251 @@
+/* 字体图标 */
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('iconfont.eot');
+    src: url('iconfont.eot?#iefix') format('embedded-opentype'), url('iconfont.woff') format('woff'), url('iconfont.ttf') format('truetype'), url('iconfont.svg#iconfont') format('svg');
+}
+
+/* 首页头部 */
+
+header {
+    height: 50px;
+    background-color: #ff841d;
+    border-bottom: 1px solid #e6e6e6;
+    .logo {
+        width: 75%;
+        float: left;
+        padding: 12px;
+        margin-left: 5px;
+        img {
+            max-width: 185px;
+            max-height: 25px;
+        }
+    }
+    .appdown {
+        float: right;
+        padding: 7px;
+        a {
+            color: #5a5a5a;
+            img {
+                max-width: 34px;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+/* 搜索框 */
+
+.head {
+    form {
+        .search {
+            border-bottom: 1px solid #e6e6e6;
+            height: 30px;
+            padding: 10px;
+            position: relative;
+            .searchtxt {
+                input {
+                    background: #f1f1f1;
+                    border-radius: 15px;
+                    padding-left: 10px;
+                    line-height: 30px;
+                    width: 90%;
+                    font-size: 16px;
+                }
+            }
+            .searchbtn {
+                input {
+                    width: 63px;
+                    line-height: 30px;
+                    background: #ff841d;
+                    color: #FFFFFF;
+                    border-radius: 15px;
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+/* 分类 */
+
+.classify {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #e6e6e6;
+    a {
+        width: 25%;
+        color: #5a5a5a;
+        font-size: 13px;
+        text-align: center;
+        padding: 5px 0;
+        .pic {
+            width: 100%;
+            img {
+                display: block;
+                width: 50px;
+                margin: 0 auto;
+                padding-bottom: 5px;
+            }
+        }
+    }
+}
+
+/* 促销 */
+
+.sale {
+    .title-all {
+        background-color: #ff9000;
+        height: 35px;
+        line-height: 35px;
+        color: #fff;
+        font-size: 18px;
+        padding: 0 15px;
+        .left {
+            float: left;
+            a {
+                color: #fff;
+            }
+        }
+        .right {
+            float: right;
+            .iconfont {
+                font-size: 18px;
+                font-family: "iconfont" !important;
+            }
+        }
+    }
+    .sale-content {
+        .contnetUl {
+            margin-bottom: 10px;
+            li {
+                padding: 10px;
+                .pic {
+                    float: left;
+                    img {
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+                .info {
+                    padding-left: 122px;
+                    .title {
+                        color: #333333;
+                        font-size: 15px;
+                        span {
+                            color: #ff6c00;
+                        }
+                    }
+                    .other {
+                        padding-top: 30px;
+                        line-height: 20px;
+                        .mall {
+                            float: left;
+                            font-size: 12px;
+                        }
+                        .comment {
+                            float: right;
+                            font-size: 16px;
+                            color: #a1a1a1;
+                            i {
+                                float: left;
+                                font-size: 12px;
+                            }
+                            .iconfont {
+                                display: block;
+                                font-family: "iconfont";
+                                color: #ccc;
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 更多优惠信息 */
+
+.more {
+    padding: 0 10px 20px 10px;
+    a {
+        height: 30px;
+        line-height: 30px;
+        border: 1px solid #e6e6e6;
+        text-align: center;
+        display: block;
+        background: #F4F4F4;
+        text-decoration: none;
+        font-size: 13px;
+    }
+}
+
+/* 品牌排行 */
+
+.title-all {
+    background-color: #ff9000;
+    height: 35px;
+    line-height: 35px;
+    color: #fff;
+    font-size: 18px;
+    padding: 0 15px;
+    .left {
+        float: left;
+        a {
+            color: #fff;
+        }
+    }
+    .right {
+        float: right;
+        .iconfont {
+            font-size: 18px;
+            font-family: "iconfont" !important;
+        }
+    }
+}
+
+/* 按钮 */
+
+.button {
+    background: #efefef;
+    border-top: 1px solid #c4c4c4;
+    border-bottom: 1px solid #c4c4c4;
+    height: 34px;
+    line-height: 34px;
+    margin-top: 25px;
+    a {
+        display: block;
+        float: left;
+        font-size: 14px;
+        border-right: 1px solid #c4c4c4;
+        text-align: center;
+        width: 30%;
+    }
+    .top {
+        border-right: none;
+        img {
+            width: 15px;
+            height: 15px;
+        }
+    }
+}
+
+/* 底部 */
+
+footer {
+    text-align: center;
+    margin-top: 10px;
+    p {
+        a:nth-child(1) {
+            color: red;
+        }
+    }
+}
