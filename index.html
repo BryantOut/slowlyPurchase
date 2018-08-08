@@ -51,7 +51,7 @@
         <!-- 准备一个模板引擎 -->
         <script type="text/x-art-template" id="tmpl">
             {{each comments}}
-            <a href="{{$value[" titlehref "]}}">
+            <a href="{{$value["titlehref"]}}">
                 <div class="pic">
                     {{@ $value["img"]}}
                 </div>
@@ -105,8 +105,9 @@
 
     <!-- 更多优惠信息 -->
     <div class="more">
-        <a href="toolActivity.html">更多优惠信息 »</a>
+        <a href="./toolActivity.html">更多优惠信息 »</a>
     </div>
+
 
     <!-- 品牌排行 -->
     <div class="title-all">
@@ -122,8 +123,8 @@
     <div class="button clearfix">
         <a href="#" class="in">登录</a>
         <a href="#" class="sign">注册</a>
-        <a href="#" class="top">
-            <img src="./images/top.png">回到顶部</a>
+        <div href="#" class="top">
+            <img src="./images/top.png">回到顶部</div>
     </div>
 
     <!-- 底部 -->
@@ -138,9 +139,7 @@
     </footer>
 </body>
 <script src="./js/plugin/art-template/template-web.js"></script>
-<script src="./js/zepto.js"></script>
+<script src="./js/jquery-1.12.2.js"></script>
 <script src="./js/index.js"></script>
-<script src="./js/index1.js"></script>
-
 
 </html>

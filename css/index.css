@@ -14,9 +14,8 @@ header {
 }
 
 header .logo {
-  width: 75%;
   float: left;
-  padding: 12px;
+  line-height: 50px;
   margin-left: 5px;
 }
 
@@ -73,6 +72,8 @@ header .appdown a img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 145px;
+  overflow: hidden;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: center;
