@@ -62,7 +62,7 @@
                     <script type="text/x-art-template" id="tmpl2">
                         {{each comments}}
                         <li>
-                            <a href="javascript:;">
+                            <a href="./Proarticle.html?id={{$value.productId}}">
                                 <div class="pic">
                                     <!-- <img src="http://pro.zuyushop.com:8015/ProPic/20165/Thumb/Thumb_2016050013560999704.png" alt=""> -->
                                     {{@ $value.productImg}}
@@ -161,7 +161,7 @@
             // console.log(Request["id"]);
 
             var btId = Request["id"];
-            console.log(typeof btId);
+            // console.log(typeof btId);
             var btName = Request["name"];
             // console.log(btName);
 
@@ -208,7 +208,7 @@
                 url: "http://193.112.55.79:9090/api/getbrandproductlist",
                 success: function (res) {
                     var data = res.result;
-                    // console.log(res.result);
+                    console.log(res.result);
                     if (data.length != 0) {
                         var h3Obj = document.createElement("h3");
                         $(".sellRanking .title").append(h3Obj);
@@ -250,7 +250,7 @@
                 },
                 url: "http://193.112.55.79:9090/api/getproductcom",
                 success: function (res) {
-                    console.log(res.result);
+                    // console.log(res.result);
                     if (res.result.length != 0) {
                         var h3Obj = document.createElement("h3");
                         $(".goodHelpComment .title").append(h3Obj);

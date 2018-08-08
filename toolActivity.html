@@ -15,7 +15,9 @@
 <body>
     <!-- 头部部分开始 -->
     <header>
-        <div class="back"><i class="iconfont">&#xf0343;</i></div>
+        <div class="back">
+            <i class="iconfont">&#xf0343;</i>
+        </div>
         <h3>省钱控-最新页面</h3>
         <div class="download">
             <a href="javascript:;">
@@ -30,9 +32,9 @@
             <script type="text/x-art-template" id="tmpl">
                 {{each comments}}
                 <li>
-                    <a href="./Proarticle.html?id={{$value.productId}}">
+                    <a href="./details.html?id={{$value.productId}}">
                         <div class="pic">
-                            {{@ $value["productImg2"]}}
+                            <img class="lazy" data-original={{$value[ "productImg2"]}}>
                         </div>
                         <div class="info clearfix">
                             <div class="title">
@@ -61,10 +63,12 @@
         <span class="next" id="next">下一页</span>
     </div>
     <!-- 分页部分结束 -->
-    <script src="./js/toolActivity.js"></script>
-    <script src="./js/zh-zepto/zepto.min.js"></script>
+
+    <script src="./js/jquery.js"></script>
+    <script src="./js/jquery.lazyload.js"></script>
     <script src="./js/zpy/fastclick.js"></script>
     <script src="./js/zpy/template-web.js"></script>
+    <script src="./js/toolActivity.js"></script>
     <script>
         if ('addEventListener' in document) {
             document.addEventListener('DOMContentLoaded', function () {
@@ -84,6 +88,8 @@
         setData(pageid);
 
 
+
+
         function setData(pageid) {
             //渲染数据
             $.ajax({
@@ -98,7 +104,22 @@
                     //返回屏幕头部
                     document.documentElement.scrollTop = 0;
 
+                    //获取图片的信息
                     var data = res.result;
+                    for (var i = 0; i < data.length; i++) {
+                        //截取图片中的src信息
+                        var startIndex = data[i]["productImg2"].indexOf("imgurl");
+                        var endIndex = data[i]["productImg2"].indexOf("\"", startIndex);
+                        var src1 = data[i]["productImg2"].slice(startIndex + 1, endIndex);
+                        var startIndex2 = src1.indexOf("=");
+                        var endIndex = src1.indexOf("\"", startIndex);
+                        console.log(startIndex2);
+                        var src = src1.slice(startIndex2 + 1, startIndex);
+                        data[i]["productImg2"] = src;
+                        console.log(src);
+                    }
+
+
                     //调用模板引擎渲染数据
                     var context = {
                         comments: data
@@ -107,12 +128,17 @@
                     var html = template('tmpl', context);
                     //将渲染结果的html设置到默认元素的innerHTML中
                     $(".contnetUl").html(html);
+                    
+                    //初始化
+                    $("img.lazy").lazyload({
+                        effect: "fadeIn"
+                    });
 
                     //计算总页数
                     var totalCount = res.totalCount;
                     var pagesize = res.pagesize;
-                    pageCount = parseInt(totalCount/pagesize)+"";
-                    
+                    pageCount = parseInt(totalCount / pagesize) + "";
+
                     if (flag == false) {
                         // console.log ("123");
                         flag = true;
@@ -124,7 +150,7 @@
                         }
                     }
 
-                    
+
                 }
             });
         }
@@ -133,12 +159,12 @@
             // console.log($(this).attr("index"));
             // console.log(this.value);
             var str = this.value;
-            var index = str.replace("/"+pageCount+"","");
+            var index = str.replace("/" + pageCount + "", "");
             pageid = index;
             setData(index);
             // console.log($(this).attr("index"));
         });
-        
+
         //为上下页标签注册点击事件
         previous.onclick = function () {
             var options = document.getElementsByTagName("option");

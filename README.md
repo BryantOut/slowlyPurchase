@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 9d91f108eb531a1a86f5025a6c9fac06b41f0059
 # 慢慢买项目文档
 
 # 1  项目准备：
@@ -375,14 +372,114 @@ $.ajax({
 
 ```js
 for (var i = 0; i < res.length; i++) {
-var startIndex=res[i].productImg.indexOf("\"");
+  var startIndex=res[i].productImg.indexOf("\"");
   var endIndex=res[i].productImg.indexOf("\"",startIndex+1);
   var ssrrcc= res[i].productImg.slice(startIndex+1,endIndex);
   console.log(ssrrcc)
 }
 ```
 
-=======
-## 
->>>>>>> 9d91f108eb531a1a86f5025a6c9fac06b41f0059
->>>>>>> db154208ebb665758212385d65a7cde563111123
+
+
+
+
+### 4.3  JavaScript indexOf() 方法
+
+#### 4.3.1  描述
+
+> indexOf() 方法可返回某个指定的字符串值在字符串中首次出现的位置。
+>
+> 如果没有找到匹配的字符串则返回 -1。
+
+#### 4.3.2  语法
+
+```js
+string.indexOf(searchvalue,start)
+```
+
+#### 4.3.3  参数值
+
+| 参数            | 描述                                       |
+| ------------- | ---------------------------------------- |
+| *searchvalue* | 必需。规定需检索的字符串值。                           |
+| *start*       | 可选的整数参数。规定在字符串中开始检索的位置。它的合法取值是 0 到 string Object.length - 1。如省略该参数，则将从字符串的首字符开始检索。 |
+
+#### 4.3.4  返回值
+
+| 类型     | 描述                                 |
+| ------ | ---------------------------------- |
+| Number | 查找指定字符串第一次出现的位置，如果没找到匹配的字符串则返回 -1。 |
+
+### 4.3.5  示例代码
+
+> 切割获取服务器返回的<img ……………………/>中的src属性对应的值
+
+```js
+var startIndex=res[i].productImg.indexOf("\"");
+var endIndex=res[i].productImg.indexOf("\"",startIndex+1);
+var ssrrcc= res[i].productImg.slice(startIndex+1,endIndex);
+data[i]["productImg2"] = src;
+```
+
+![](./mdImg/图片懒加载1.png)
+
+> html 代码
+
+```html
+<img class="lazy" data-original={{$value[ "productImg2"]}}>
+```
+
+> 渲染模板之后初始化
+
+```js
+//调用模板引擎渲染数据
+var context = {
+  comments: data
+}
+//借助模板引擎的api
+var html = template('tmpl', context);
+//将渲染结果的html设置到默认元素的innerHTML中
+$(".contnetUl").html(html);
+
+//初始化
+$("img.lazy").lazyload({
+  effect: "fadeIn"
+});
+```
+
+> **重点**
+
+**记得在模板引擎中，图片渲染完毕后初始化**
+
+
+
+## 五、jQuery load() 方法
+
+
+
+> 入口函数建议传参($)，因为这样是局部变量，直接引用jq对象，不用一层一层往上找
+
+```js
+$(function ($) {})
+```
+
+
+
+### 5.1  描述
+
+> jQuery load() 方法是简单但强大的 AJAX 方法。
+>
+> load() 方法从服务器加载数据，并把返回的数据放入被选元素中。
+
+### 5.2  语法
+
+```js
+$(selector).load(URL,data,callback);
+```
+
+- 必需的 *URL* 参数规定您希望加载的 URL。
+- 可选的 *data* 参数规定与请求一同发送的查询字符串键/值对集合。
+- 可选的 *callback* 参数是 load() 方法完成后所执行的函数名称。
+
+
+
