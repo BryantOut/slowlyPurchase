@@ -7,3 +7,8 @@ $.get("http://193.112.55.79:9090/api/getmoneyctrlproduct",{"productid":id},funct
     var html=template("goods",{data:res.result});
     $('#introduce').html(html);
 },"json");
+
+$("header span").on("click",function () {
+
+    window.history.go(-1);
+});

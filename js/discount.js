@@ -5,7 +5,7 @@ $(function () {
     var res = res.result;
     // console.log(res1[0].productImg);
     for (var i = 0; i < res.length; i++) {
-        var indexlength = res[i].productImg.length - 1;
+        // var indexlength = res[i].productImg.length - 1;
         var startIndex=res[i].productImg.indexOf("\"");
         var endIndex=res[i].productImg.indexOf("\"",startIndex+1);
         var ssrrcc= res[i].productImg.slice(startIndex+1,endIndex);
