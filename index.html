@@ -73,11 +73,12 @@
         </div>
         <div class="sale-content">
             <ul class="contnetUl">
+                    <!-- <a href="{{$value[" productFrom "]}}"> -->
                 <!-- 准备一个模板引擎 -->
                 <script type="text/x-art-template" id="tmpl1">
                     {{each comments}}
                     <li>
-                        <a href="{{$value[" productFrom "]}}">
+                        <a href="./details.html?id={{$value.productId}}">
                             <div class="pic">
                                 {{@ $value["productImg2"]}}
                             </div>
