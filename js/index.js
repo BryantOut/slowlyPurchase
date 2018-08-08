@@ -45,6 +45,10 @@ $.ajax({
             // console.log("张佩茵有男朋友的经理");
             $(".classify").css("height","240px");
         });
+
+        var liObj = $(".classify a").eq(1).attr("href","youhui.html");
+        
+        // console.log(liObj.Child());
     }
 })
 /* 商品详情渲染 */
@@ -53,7 +57,7 @@ $.ajax({
     type: "get",
     url: "http://193.112.55.79:9090/api/getmoneyctrl",
     success: function (res) {
-        console.log(res.result);
+        // console.log(res.result);
 
         var data = res.result;
         //调用模板引擎渲染数据
@@ -65,6 +69,7 @@ $.ajax({
         //将渲染结果的html设置到默认元素的innerHTML中
         $(".contnetUl").html(html);
 
+        
     }
 })
 

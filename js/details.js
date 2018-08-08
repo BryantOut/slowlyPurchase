@@ -65,3 +65,7 @@ function CurentTime() {
     return (clock);
 }
 
+$(".back").on("click",function () {
+    // console.log("哈哈哈");
+    history.back();
+});

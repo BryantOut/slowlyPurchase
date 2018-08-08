@@ -147,4 +147,43 @@ header h3 {
 }
 
 /* 分页部分结束 */
+/* 按钮 */
+.button {
+  background: #efefef;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+  height: 34px;
+  line-height: 34px;
+  margin-top: 25px;
+}
+
+.button a {
+  display: block;
+  float: left;
+  font-size: 14px;
+  border-right: 1px solid #c4c4c4;
+  text-align: center;
+  width: 30%;
+}
+
+.button .top {
+  border-right: none;
+  padding-left: 20px;
+}
+
+.button .top img {
+  width: 15px;
+  height: 15px;
+  vertical-align: text-top;
+}
+
+/* 底部 */
+footer {
+  text-align: center;
+  margin-top: 10px;
+}
+
+footer p a:nth-child(1) {
+  color: red;
+}
 /*# sourceMappingURL=toolActivity.css.map */

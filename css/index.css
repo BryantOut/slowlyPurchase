@@ -254,11 +254,13 @@ header .appdown a img {
 
 .button .top {
   border-right: none;
+  padding-left: 20px;
 }
 
 .button .top img {
   width: 15px;
   height: 15px;
+  vertical-align: text-top;
 }
 
 /* 底部 */

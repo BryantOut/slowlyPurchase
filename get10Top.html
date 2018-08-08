@@ -16,7 +16,18 @@
 <body>
     <div class="view">
         <!-- 头部部分开始 -->
-        <div class="header"></div>
+        <header>
+            <div class="back">
+                <i class="iconfont">
+                    < </i>
+            </div>
+            <h3>省钱控-最新页面</h3>
+            <div class="download">
+                <a href="./index.html">
+                    <img src="./images/header_app.png" alt="">
+                </a>
+            </div>
+        </header>
         <!-- 头部部分结束 -->
 
         <!-- 内容部分开始 -->
@@ -98,7 +109,7 @@
                 <!-- <h3></h3> -->
                 <div class="brandInfo">
                     <div class="pic">
-                        
+
                     </div>
                     <p></p>
                 </div>
@@ -135,7 +146,26 @@
         </div>
 
         <!-- footer部分开始 -->
-        <div class="footer"></div>
+         <!-- footer部分开始 -->
+        <!-- 按钮 -->
+        <div class="button clearfix">
+            <a href="#" class="in">登录</a>
+            <a href="#" class="sign">注册</a>
+            <a href="#" class="top">
+                <img src="./images/top.png">回到顶部</a>
+        </div>
+
+        <!-- 底部 -->
+        <footer>
+            <p>
+                <a href="#">手机下载</a>
+                <a href="#"> 慢慢买手机版</a>
+                -- 掌上比价平台</p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </footer>
+        <!-- footer部分结束 -->
         <!-- footer部分结束 -->
 
     </div>
@@ -276,6 +306,11 @@
                 }
             });
         }
+
+        $(".back").on("click", function () {
+            // console.log("哈哈哈");
+            history.back();
+        });
     </script>
     <script src="./js/get10top.js"></script>
 </body>
