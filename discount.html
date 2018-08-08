@@ -20,7 +20,7 @@
                         <span class="iconfont">&#xe629;</span>
                     </a>
                 </div>
-                <h1>国内折扣</h1>
+                <h1 id=1>国内折扣</h1>
                 <div class="home">
                     <a href="javascript:;">
                         <span class="iconfont">&#xe63b;</span>
@@ -32,17 +32,35 @@
         <!-- 头部结束 -->
         <!-- 列表内容-开始 -->
         <div class="list_concent">
-            <ul id="uls" >
+            <ul id="uls">
             </ul>
         </div>
         <!-- 列表内容-结束 -->
+        <!-- 底部开始 -->
+        <footer>
+            <a href="">登录</a>
+            <a href="">注册</a>
+            <a href="#1">
+                <i class="fa fa-angle-double-up"></i>
+                返回顶部</a>
+        </footer>
+        <div class="dow">
+            <p>
+                <a href="">手机APP下载</a>
+                <a href="">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+        <!-- 底部结束 -->
     </div>
 </body>
 <script type="text/template" id='discounts'>
     {{each data vaule}}
     <li>
-        <a href="javascript:;">
-      
+        <a href="zhekou.html?id={{vaule.productId}}">
+
             <img class="lazy" data-original='{{vaule.productImg}}'>
             <div class="title">{{vaule.productName}}</div>
             <div class="subtit">{{vaule.productPrice}}</div>

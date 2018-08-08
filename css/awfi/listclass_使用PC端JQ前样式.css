@@ -1,0 +1,77 @@
+body {
+  background-color: #f2f2f2;
+}
+
+.entirety .main {
+  background-color: #ebebeb;
+  width: 97%;
+  margin: 1.5% auto 0;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+}
+
+.entirety .main ul li .list_title {
+  height: 41px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 92%;
+  padding: 0 4%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #cccccc;
+}
+
+.entirety .main ul li .list_title .title {
+  color: #000;
+  font-size: 16px;
+}
+
+.entirety .main ul li .list_title .icon {
+  width: 16px;
+  height: 7px;
+}
+
+.entirety .main ul .list_content {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-bottom: 2px solid #888;
+}
+
+.entirety .main ul .list_content li {
+  width: 33.33%;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-top: none;
+  text-align: center;
+}
+
+.entirety .main ul .list_content li:nth-child(3n) {
+  border-right: none;
+}
+
+.entirety .main ul .list_content li:nth-last-child(1) {
+  border-bottom: none;
+}
+
+.entirety .main ul .list_content li a {
+  height: 40px;
+  width: 100%;
+  line-height: 40px;
+  display: block;
+}
+
+.hide {
+  display: none !important;
+}
+/*# sourceMappingURL=listclass_使用PC端JQ前样式.css.map */

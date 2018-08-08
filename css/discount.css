@@ -77,7 +77,7 @@ header .head .home > a {
 
 header .head .home > a > span.iconfont {
   font-family: 'iconfont';
-  font-size: 20px;
+  font-size: 18px;
 }
 
 header .head .home > a p {
@@ -136,4 +136,48 @@ header .head .home > a p {
 }
 
 /* 列表内容结束*/
+/*底部开始*/
+footer {
+  background-color: #f1f1f1;
+  height: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer > a {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  text-align: center;
+  line-height: 38px;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+  border-right: 1px solid #c4c4c4;
+  color: #333333;
+}
+
+footer > a .fa {
+  font-size: 20px;
+}
+
+footer a:nth-child(3) {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  border-right: none;
+}
+
+.dow {
+  padding: 10px 0;
+  background-color: #efefef;
+}
+
+.dow p {
+  text-align: center;
+}
+
+.dow p a:nth-child(1) {
+  color: #ff0000;
+}
 /*# sourceMappingURL=discount.css.map */
